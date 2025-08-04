@@ -1,0 +1,762 @@
+[
+  {
+    "platform": "贴吧",
+    "emojis": [
+      {
+        "url": "output/tieba/01_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/02_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/03_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/04_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/05_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/06_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/07_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/08_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/09_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/10_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/11_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/12_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/13_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/14_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/15_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/16_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/17_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/18_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/19_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/20_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/21_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/22_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/23_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/24_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/tieba/25_emoji.avif",
+        "description": "",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "platform": "知乎",
+    "emojis": [
+      {
+        "url": "output/zhihu/01_爱.avif",
+        "description": "爱",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/02_害羞.avif",
+        "description": "害羞",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/03_好奇.avif",
+        "description": "好奇",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/04_思考.avif",
+        "description": "思考",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/05_酷.avif",
+        "description": "酷",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/06_大笑.avif",
+        "description": "大笑",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/07_捂脸.avif",
+        "description": "捂脸",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/08_捂嘴.avif",
+        "description": "捂嘴",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/09_飙泪笑.avif",
+        "description": "飙泪笑",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/10_耶.avif",
+        "description": "耶",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/11_惊喜.avif",
+        "description": "惊喜",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/12_流泪.avif",
+        "description": "流泪",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/13_大哭.avif",
+        "description": "大哭",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/14_生气.avif",
+        "description": "生气",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/15_惊讶.avif",
+        "description": "惊讶",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/16_调皮.avif",
+        "description": "调皮",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/17_衰.avif",
+        "description": "衰",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/18_发呆.avif",
+        "description": "发呆",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/19_机智.avif",
+        "description": "机智",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/20_尴尬.avif",
+        "description": "尴尬",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/21_吃瓜.avif",
+        "description": "吃瓜",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/22_为难.avif",
+        "description": "为难",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/23_看看你.avif",
+        "description": "看看你",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/24_滑稽.avif",
+        "description": "滑稽",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/25_开心.avif",
+        "description": "开心",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/26_笑哭.avif",
+        "description": "笑哭",
+        "tags": []
+      },
+      {
+        "url": "output/zhihu/27_白眼.avif",
+        "description": "白眼",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "platform": "小红书",
+    "emojis": [
+      {
+        "url": "output/xiaohongshu/01_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/02_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/03_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/04_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/05_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/06_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/07_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/08_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/09_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/10_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/11_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/12_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/13_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/14_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/15_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/16_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/17_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/18_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/19_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/20_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/21_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/22_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/23_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/24_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/25_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/26_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/27_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/28_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/29_emoji.avif",
+        "description": "",
+        "tags": []
+      },
+      {
+        "url": "output/xiaohongshu/30_emoji.avif",
+        "description": "",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "platform": "抖音",
+    "emojis": [
+      {
+        "url": "output/douyin/001_douyin_emoji.avif",
+        "description": "微笑",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/003_douyin_emoji.avif",
+        "description": "发呆",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/006_douyin_emoji.avif",
+        "description": "色",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/007_douyin_emoji.avif",
+        "description": "流泪",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/009_douyin_emoji.avif",
+        "description": "捂脸",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/010_douyin_emoji.avif",
+        "description": "抠鼻",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/011_douyin_emoji.avif",
+        "description": "呲牙",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/012_douyin_emoji.avif",
+        "description": "尬笑",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/013_douyin_emoji.avif",
+        "description": "害羞",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/014_douyin_emoji.avif",
+        "description": "调皮",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/020_douyin_emoji.avif",
+        "description": "舔屏",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/025_douyin_emoji.avif",
+        "description": "看",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/027_douyin_emoji.avif",
+        "description": "送心",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/038_douyin_emoji.avif",
+        "description": "大笑",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/040_douyin_emoji.avif",
+        "description": "灵机一动",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/041_douyin_emoji.avif",
+        "description": "震惊",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/045_douyin_emoji.avif",
+        "description": "泣不成声",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/048_douyin_emoji.avif",
+        "description": "偷笑",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/049_douyin_emoji.avif",
+        "description": "吐血",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/050_douyin_emoji.avif",
+        "description": "可怜",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/052_douyin_emoji.avif",
+        "description": "偷笑",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/054_douyin_emoji.avif",
+        "description": "泪奔",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/056_douyin_emoji.avif",
+        "description": "坏笑",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/058_douyin_emoji.avif",
+        "description": "快哭了",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/064_douyin_emoji.avif",
+        "description": "委屈",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/088_douyin_emoji.avif",
+        "description": "裂开",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/096_douyin_emoji.avif",
+        "description": "呆无辜",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/098_douyin_emoji.avif",
+        "description": "惊喜",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/100_douyin_emoji.avif",
+        "description": "噢买尬",
+        "tags": []
+      },
+      {
+        "url": "output/douyin/101_douyin_emoji.avif",
+        "description": "宕机",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "platform": "B站",
+    "emojis": [
+      {
+        "url": "origins/B站/01_笑哭.avif",
+        "description": "笑哭",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/02_星星眼.avif",
+        "description": "星星眼",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/03_微笑.avif",
+        "description": "微笑",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/04_吃瓜.avif",
+        "description": "吃瓜",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/05_OK.avif",
+        "description": "OK",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/06_doge.avif",
+        "description": "doge",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/07_大哭.avif",
+        "description": "大哭",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/08_辣眼睛.avif",
+        "description": "辣眼睛",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/09_滑稽.avif",
+        "description": "滑稽",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/10_喜极而泣.avif",
+        "description": "喜极而泣",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/11_呲牙.avif",
+        "description": "呲牙",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/12_歪嘴.avif",
+        "description": "歪嘴",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/13_调皮.avif",
+        "description": "调皮",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/14_妙啊.avif",
+        "description": "妙啊",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/15_嗑瓜子.avif",
+        "description": "嗑瓜子",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/16_脱单doge.avif",
+        "description": "脱单doge",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/17_笑.avif",
+        "description": "笑",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/18_给心心.avif",
+        "description": "给心心",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/19_脸红.avif",
+        "description": "脸红",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/20_哦呼.avif",
+        "description": "哦呼",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/21_喜欢.avif",
+        "description": "喜欢",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/22_酸了.avif",
+        "description": "酸了",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/23_害羞.avif",
+        "description": "害羞",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/24_嫌弃.avif",
+        "description": "嫌弃",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/25_惊讶.avif",
+        "description": "惊讶",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/26_捂脸.avif",
+        "description": "捂脸",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/27_大笑.avif",
+        "description": "大笑",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/28_抠鼻.avif",
+        "description": "抠鼻",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/29_惊喜.avif",
+        "description": "惊喜",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/30_点赞.avif",
+        "description": "点赞",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/31_无语.avif",
+        "description": "无语",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/32_委屈.avif",
+        "description": "委屈",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/33_傲娇.avif",
+        "description": "傲娇",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/34_疼.avif",
+        "description": "疼",
+        "tags": []
+      },
+      {
+        "url": "origins/B站/35_思考.avif",
+        "description": "思考",
+        "tags": []
+      }
+    ]
+  }
+]

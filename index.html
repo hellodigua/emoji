@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>各大平台表情包</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 30px 0;
+        flex-wrap: wrap;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .platform-section {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      .platform-header {
+        padding: 25px 30px;
+        border-bottom: 2px solid #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .platform-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .platform-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bold;
+      }
+
+      .platform-count {
+        background: #e3f2fd;
+        color: #1976d2;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .emoji-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 15px;
+        padding: 30px;
+      }
+
+      .emoji-item {
+        background: white;
+        border-radius: 15px;
+        padding: 10px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+
+      .emoji-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        border-color: #667eea;
+      }
+
+      .emoji-image {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+
+      .emoji-description {
+        font-size: 0.85rem;
+        color: #666;
+        font-weight: 500;
+        min-height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 平台颜色主题 */
+      .tieba {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      }
+      .zhihu {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .xiaohongshu {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+      }
+      .douyin {
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      }
+      .bilibili {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      }
+
+      /* 响应式设计 */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .stats {
+          gap: 15px;
+        }
+
+        .emoji-grid {
+          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+          gap: 10px;
+          padding: 20px;
+        }
+
+        .platform-header {
+          padding: 20px;
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+      }
+
+      /* 加载动画 */
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        color: #666;
+        font-size: 1.2rem;
+      }
+
+      /* 搜索功能 */
+      .search-container {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .search-input {
+        background: rgba(255, 255, 255, 0.9);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 25px;
+        padding: 15px 25px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 400px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .search-input:focus {
+        background: white;
+        border-color: #667eea;
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+      }
+
+      .search-input::placeholder {
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🎭 各大平台表情包</h1>
+        <p>收录贴吧、知乎、小红书、抖音、B站表情包</p>
+        <div class="stats" id="stats">
+          <div class="stat-card">
+            <div class="stat-number" id="totalEmojis">0</div>
+            <div class="stat-label">总表情包</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5</div>
+            <div class="stat-label">平台数量</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="搜索表情包..."
+          id="searchInput"
+        />
+      </div>
+
+      <div id="platformsContainer">
+        <div class="loading">正在加载表情包数据...</div>
+      </div>
+    </div>
+
+    <script>
+      let emojiData = [];
+      let filteredData = [];
+
+      // 平台配置
+      const platformConfig = {
+        贴吧: { icon: "贴", class: "tieba" },
+        知乎: { icon: "知", class: "zhihu" },
+        小红书: { icon: "红", class: "xiaohongshu" },
+        抖音: { icon: "抖", class: "douyin" },
+        B站: { icon: "B", class: "bilibili" },
+      };
+
+      // 加载表情包数据
+      async function loadEmojiData() {
+        try {
+          const response = await fetch("emoji.json");
+          emojiData = await response.json();
+          filteredData = [...emojiData];
+          renderPlatforms();
+          updateStats();
+        } catch (error) {
+          console.error("加载数据失败:", error);
+          document.getElementById("platformsContainer").innerHTML =
+            '<div class="loading">❌ 加载失败，请确保 emoji.json 文件存在</div>';
+        }
+      }
+
+      // 渲染平台
+      function renderPlatforms() {
+        const container = document.getElementById("platformsContainer");
+
+        if (filteredData.length === 0) {
+          container.innerHTML =
+            '<div class="loading">😢 没有找到匹配的表情包</div>';
+          return;
+        }
+
+        container.innerHTML = filteredData
+          .map((platform) => {
+            const config = platformConfig[platform.platform] || {
+              icon: "?",
+              class: "default",
+            };
+
+            return `
+                    <div class="platform-section">
+                        <div class="platform-header">
+                            <div class="platform-title">
+                                <div class="platform-icon ${config.class}">${
+              config.icon
+            }</div>
+                                ${platform.platform}
+                            </div>
+                            <div class="platform-count">${
+                              platform.emojis.length
+                            } 个表情</div>
+                        </div>
+                        <div class="emoji-grid">
+                            ${platform.emojis
+                              .map(
+                                (emoji, index) => `
+                                <div class="emoji-item" onclick="copyToClipboard('${
+                                  emoji.url
+                                }')">
+                                    <img src="${emoji.url}" alt="${
+                                  emoji.description || "表情"
+                                }" class="emoji-image"
+                                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iOCIgZmlsbD0iI0Y1RjVGNSIvPgo8dGV4dCB4PSIzMCIgeT0iMzUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+YvjwvdGV4dD4KPHN2Zz4K'">
+                                    <div class="emoji-description">${
+                                      emoji.description || `表情 ${index + 1}`
+                                    }</div>
+                                </div>
+                            `
+                              )
+                              .join("")}
+                        </div>
+                    </div>
+                `;
+          })
+          .join("");
+      }
+
+      // 更新统计信息
+      function updateStats() {
+        const totalEmojis = filteredData.reduce(
+          (sum, platform) => sum + platform.emojis.length,
+          0
+        );
+        document.getElementById("totalEmojis").textContent = totalEmojis;
+      }
+
+      // 搜索功能
+      function filterEmojis(searchTerm) {
+        if (!searchTerm.trim()) {
+          filteredData = [...emojiData];
+        } else {
+          filteredData = emojiData
+            .map((platform) => ({
+              ...platform,
+              emojis: platform.emojis.filter(
+                (emoji) =>
+                  emoji.description
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase()) ||
+                  platform.platform
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase())
+              ),
+            }))
+            .filter((platform) => platform.emojis.length > 0);
+        }
+
+        renderPlatforms();
+        updateStats();
+      }
+
+      // 复制到剪贴板
+      function copyToClipboard(text) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            // 简单的提示
+            const toast = document.createElement("div");
+            toast.textContent = "已复制路径到剪贴板！";
+            toast.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #4CAF50;
+                    color: white;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    z-index: 1000;
+                    animation: fadeInOut 2s ease-in-out;
+                `;
+            document.body.appendChild(toast);
+            setTimeout(() => document.body.removeChild(toast), 2000);
+          })
+          .catch((err) => {
+            console.error("复制失败:", err);
+          });
+      }
+
+      // 添加 CSS 动画
+      const style = document.createElement("style");
+      style.textContent = `
+            @keyframes fadeInOut {
+                0%, 100% { opacity: 0; transform: translateY(-20px); }
+                10%, 90% { opacity: 1; transform: translateY(0); }
+            }
+        `;
+      document.head.appendChild(style);
+
+      // 事件监听
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        filterEmojis(e.target.value);
+      });
+
+      // 初始化
+      loadEmojiData();
+    </script>
+  </body>
+</html>
