@@ -175,6 +175,9 @@
       .bilibili {
         background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
       }
+      .weibo {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
+      }
 
       /* 响应式设计 */
       @media (max-width: 768px) {
@@ -243,14 +246,14 @@
     <div class="container">
       <div class="header">
         <h1>🎭 各大平台表情包</h1>
-        <p>收录贴吧、知乎、小红书、抖音、B站表情包</p>
+        <p>收录贴吧、知乎、小红书、抖音、B站、微博表情包</p>
         <div class="stats" id="stats">
           <div class="stat-card">
             <div class="stat-number" id="totalEmojis">0</div>
             <div class="stat-label">总表情包</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">5</div>
+            <div class="stat-number">6</div>
             <div class="stat-label">平台数量</div>
           </div>
         </div>
@@ -281,6 +284,7 @@
         小红书: { icon: "红", class: "xiaohongshu" },
         抖音: { icon: "抖", class: "douyin" },
         B站: { icon: "B", class: "bilibili" },
+        微博: { icon: "微", class: "weibo" },
       };
 
       // 加载表情包数据
@@ -332,7 +336,7 @@
                             ${platform.emojis
                               .map(
                                 (emoji, index) => `
-                                <div class="emoji-item" onclick="copyToClipboard('${
+                                <div class="emoji-item" onclick="copyImageToClipboard('${
                                   emoji.url
                                 }')">
                                     <img src="${emoji.url}" alt="${
@@ -387,31 +391,103 @@
         updateStats();
       }
 
-      // 复制到剪贴板
-      function copyToClipboard(text) {
-        navigator.clipboard
-          .writeText(text)
-          .then(() => {
-            // 简单的提示
-            const toast = document.createElement("div");
-            toast.textContent = "已复制路径到剪贴板！";
-            toast.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    background: #4CAF50;
-                    color: white;
-                    padding: 10px 20px;
-                    border-radius: 5px;
-                    z-index: 1000;
-                    animation: fadeInOut 2s ease-in-out;
-                `;
-            document.body.appendChild(toast);
-            setTimeout(() => document.body.removeChild(toast), 2000);
-          })
-          .catch((err) => {
-            console.error("复制失败:", err);
+      // 复制图片到剪贴板
+      async function copyImageToClipboard(imageSrc) {
+        try {
+          // 创建一个临时的 canvas 来处理图片
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          const img = new Image();
+          
+          // 设置跨域属性
+          img.crossOrigin = 'anonymous';
+          
+          return new Promise((resolve, reject) => {
+            img.onload = async () => {
+              try {
+                // 设置 canvas 尺寸
+                canvas.width = img.width;
+                canvas.height = img.height;
+                
+                // 绘制图片到 canvas
+                ctx.drawImage(img, 0, 0);
+                
+                // 将 canvas 转换为 blob
+                canvas.toBlob(async (blob) => {
+                  try {
+                    // 使用 Clipboard API 复制图片
+                    await navigator.clipboard.write([
+                      new ClipboardItem({
+                        [blob.type]: blob
+                      })
+                    ]);
+                    
+                    showToast("✅ 图片已复制到剪贴板！", "#4CAF50");
+                    resolve();
+                  } catch (err) {
+                    // 如果复制图片失败，回退到复制路径
+                    console.warn("复制图片失败，回退到复制路径:", err);
+                    await fallbackCopyText(imageSrc);
+                    resolve();
+                  }
+                }, 'image/png');
+              } catch (err) {
+                console.error("处理图片失败:", err);
+                await fallbackCopyText(imageSrc);
+                resolve();
+              }
+            };
+            
+            img.onerror = async () => {
+              console.error("加载图片失败:", imageSrc);
+              await fallbackCopyText(imageSrc);
+              resolve();
+            };
+            
+            // 开始加载图片
+            img.src = imageSrc;
           });
+        } catch (err) {
+          console.error("复制功能不支持:", err);
+          await fallbackCopyText(imageSrc);
+        }
+      }
+      
+      // 回退方案：复制文本路径
+      async function fallbackCopyText(text) {
+        try {
+          await navigator.clipboard.writeText(text);
+          showToast("📋 图片路径已复制到剪贴板", "#FF9800");
+        } catch (err) {
+          console.error("复制路径也失败了:", err);
+          showToast("❌ 复制失败，请手动保存图片", "#f44336");
+        }
+      }
+      
+      // 显示提示消息
+      function showToast(message, backgroundColor = "#4CAF50") {
+        const toast = document.createElement("div");
+        toast.textContent = message;
+        toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${backgroundColor};
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                z-index: 1000;
+                font-size: 14px;
+                font-weight: 500;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                animation: fadeInOut 3s ease-in-out;
+            `;
+        document.body.appendChild(toast);
+        setTimeout(() => {
+          if (document.body.contains(toast)) {
+            document.body.removeChild(toast);
+          }
+        }, 3000);
       }
 
       // 添加 CSS 动画

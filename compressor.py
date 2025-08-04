@@ -30,7 +30,8 @@ class EmojiCompressor:
             '知乎': 'zhihu',
             '小红书': 'xiaohongshu',
             '抖音': 'douyin',
-            'B站': 'bilibili'
+            'B站': 'bilibili',
+            '微博': 'weibo'
         }
 
         # 检查并初始化工具

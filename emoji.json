@@ -583,178 +583,333 @@
     "platform": "B站",
     "emojis": [
       {
-        "url": "origins/B站/01_笑哭.avif",
+        "url": "output/bilibili/01_笑哭.avif",
         "description": "笑哭",
         "tags": []
       },
       {
-        "url": "origins/B站/02_星星眼.avif",
+        "url": "output/bilibili/02_星星眼.avif",
         "description": "星星眼",
         "tags": []
       },
       {
-        "url": "origins/B站/03_微笑.avif",
+        "url": "output/bilibili/03_微笑.avif",
         "description": "微笑",
         "tags": []
       },
       {
-        "url": "origins/B站/04_吃瓜.avif",
+        "url": "output/bilibili/04_吃瓜.avif",
         "description": "吃瓜",
         "tags": []
       },
       {
-        "url": "origins/B站/05_OK.avif",
+        "url": "output/bilibili/05_OK.avif",
         "description": "OK",
         "tags": []
       },
       {
-        "url": "origins/B站/06_doge.avif",
+        "url": "output/bilibili/06_doge.avif",
         "description": "doge",
         "tags": []
       },
       {
-        "url": "origins/B站/07_大哭.avif",
+        "url": "output/bilibili/07_大哭.avif",
         "description": "大哭",
         "tags": []
       },
       {
-        "url": "origins/B站/08_辣眼睛.avif",
+        "url": "output/bilibili/08_辣眼睛.avif",
         "description": "辣眼睛",
         "tags": []
       },
       {
-        "url": "origins/B站/09_滑稽.avif",
+        "url": "output/bilibili/09_滑稽.avif",
         "description": "滑稽",
         "tags": []
       },
       {
-        "url": "origins/B站/10_喜极而泣.avif",
+        "url": "output/bilibili/10_喜极而泣.avif",
         "description": "喜极而泣",
         "tags": []
       },
       {
-        "url": "origins/B站/11_呲牙.avif",
+        "url": "output/bilibili/11_呲牙.avif",
         "description": "呲牙",
         "tags": []
       },
       {
-        "url": "origins/B站/12_歪嘴.avif",
+        "url": "output/bilibili/12_歪嘴.avif",
         "description": "歪嘴",
         "tags": []
       },
       {
-        "url": "origins/B站/13_调皮.avif",
+        "url": "output/bilibili/13_调皮.avif",
         "description": "调皮",
         "tags": []
       },
       {
-        "url": "origins/B站/14_妙啊.avif",
+        "url": "output/bilibili/14_妙啊.avif",
         "description": "妙啊",
         "tags": []
       },
       {
-        "url": "origins/B站/15_嗑瓜子.avif",
+        "url": "output/bilibili/15_嗑瓜子.avif",
         "description": "嗑瓜子",
         "tags": []
       },
       {
-        "url": "origins/B站/16_脱单doge.avif",
+        "url": "output/bilibili/16_脱单doge.avif",
         "description": "脱单doge",
         "tags": []
       },
       {
-        "url": "origins/B站/17_笑.avif",
+        "url": "output/bilibili/17_笑.avif",
         "description": "笑",
         "tags": []
       },
       {
-        "url": "origins/B站/18_给心心.avif",
+        "url": "output/bilibili/18_给心心.avif",
         "description": "给心心",
         "tags": []
       },
       {
-        "url": "origins/B站/19_脸红.avif",
+        "url": "output/bilibili/19_脸红.avif",
         "description": "脸红",
         "tags": []
       },
       {
-        "url": "origins/B站/20_哦呼.avif",
+        "url": "output/bilibili/20_哦呼.avif",
         "description": "哦呼",
         "tags": []
       },
       {
-        "url": "origins/B站/21_喜欢.avif",
+        "url": "output/bilibili/21_喜欢.avif",
         "description": "喜欢",
         "tags": []
       },
       {
-        "url": "origins/B站/22_酸了.avif",
+        "url": "output/bilibili/22_酸了.avif",
         "description": "酸了",
         "tags": []
       },
       {
-        "url": "origins/B站/23_害羞.avif",
+        "url": "output/bilibili/23_害羞.avif",
         "description": "害羞",
         "tags": []
       },
       {
-        "url": "origins/B站/24_嫌弃.avif",
+        "url": "output/bilibili/24_嫌弃.avif",
         "description": "嫌弃",
         "tags": []
       },
       {
-        "url": "origins/B站/25_惊讶.avif",
+        "url": "output/bilibili/25_惊讶.avif",
         "description": "惊讶",
         "tags": []
       },
       {
-        "url": "origins/B站/26_捂脸.avif",
+        "url": "output/bilibili/26_捂脸.avif",
         "description": "捂脸",
         "tags": []
       },
       {
-        "url": "origins/B站/27_大笑.avif",
+        "url": "output/bilibili/27_大笑.avif",
         "description": "大笑",
         "tags": []
       },
       {
-        "url": "origins/B站/28_抠鼻.avif",
+        "url": "output/bilibili/28_抠鼻.avif",
         "description": "抠鼻",
         "tags": []
       },
       {
-        "url": "origins/B站/29_惊喜.avif",
+        "url": "output/bilibili/29_惊喜.avif",
         "description": "惊喜",
         "tags": []
       },
       {
-        "url": "origins/B站/30_点赞.avif",
+        "url": "output/bilibili/30_点赞.avif",
         "description": "点赞",
         "tags": []
       },
       {
-        "url": "origins/B站/31_无语.avif",
+        "url": "output/bilibili/31_无语.avif",
         "description": "无语",
         "tags": []
       },
       {
-        "url": "origins/B站/32_委屈.avif",
+        "url": "output/bilibili/32_委屈.avif",
         "description": "委屈",
         "tags": []
       },
       {
-        "url": "origins/B站/33_傲娇.avif",
+        "url": "output/bilibili/33_傲娇.avif",
         "description": "傲娇",
         "tags": []
       },
       {
-        "url": "origins/B站/34_疼.avif",
+        "url": "output/bilibili/34_疼.avif",
         "description": "疼",
         "tags": []
       },
       {
-        "url": "origins/B站/35_思考.avif",
+        "url": "output/bilibili/35_思考.avif",
         "description": "思考",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "platform": "微博",
+    "emojis": [
+      {
+        "url": "output/weibo/2018new_weixioa02_org.avif",
+        "description": "微笑",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_keai_org.avif",
+        "description": "可爱",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_taikaixin_org.avif",
+        "description": "太开心",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_xixi_org.avif",
+        "description": "嘻嘻",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_haha_org.avif",
+        "description": "哈哈",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_xiaoku_thumb.avif",
+        "description": "笑cry",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_chanzui_org.avif",
+        "description": "馋嘴",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_kelian_org.avif",
+        "description": "可怜",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_shiwang_org.avif",
+        "description": "失望",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_beishang_org.avif",
+        "description": "悲伤",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_leimu_org.avif",
+        "description": "泪",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_kuxiao_org.avif",
+        "description": "允悲",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2021_bitter_org.avif",
+        "description": "苦涩",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_aini_org.avif",
+        "description": "爱你",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_chongjing_org.avif",
+        "description": "憧憬",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2022_wow_org.avif",
+        "description": "哇",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_xiaoerbuyu_org.avif",
+        "description": "笑而不语",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_ku_org.avif",
+        "description": "酷",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_landelini_org.avif",
+        "description": "白眼",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/202011_liekai_org.avif",
+        "description": "裂开",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2021_kaixueji_org.avif",
+        "description": "开学季",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2018new_chigua_org.avif",
+        "description": "吃瓜",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2025_ShedTears_org.avif",
+        "description": "泪奔",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2025_liuhan_org.avif",
+        "description": "流汗",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2025_wuzuiku_org.avif",
+        "description": "捂嘴哭",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2025_jingkong_org.avif",
+        "description": "惊恐",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2025_yeah_org.avif",
+        "description": "yeah",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2025_like_org.avif",
+        "description": "点赞",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2025_shock_org.avif",
+        "description": "震惊",
+        "tags": []
+      },
+      {
+        "url": "output/weibo/2025_frown_org.avif",
+        "description": "皱眉",
         "tags": []
       }
     ]
