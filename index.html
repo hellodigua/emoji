@@ -3,249 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>各大平台表情包</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Helvetica Neue", Arial, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        padding: 20px;
-      }
-
-      .container {
-        max-width: 1400px;
-        margin: 0 auto;
-      }
-
-      .header {
-        text-align: center;
-        margin-bottom: 40px;
-        color: white;
-      }
-
-      .header h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      .header p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-      }
-
-      .stats {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin: 30px 0;
-        flex-wrap: wrap;
-      }
-
-      .stat-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-      }
-
-      .stat-number {
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-
-      .stat-label {
-        font-size: 0.9rem;
-        opacity: 0.8;
-      }
-
-      .platform-section {
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 20px;
-        margin-bottom: 30px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-      }
-
-      .platform-header {
-        padding: 25px 30px;
-        border-bottom: 2px solid #f0f0f0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .platform-title {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #333;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .platform-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        color: white;
-        font-weight: bold;
-      }
-
-      .platform-count {
-        background: #e3f2fd;
-        color: #1976d2;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        font-weight: 500;
-      }
-
-      .emoji-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        gap: 15px;
-        padding: 30px;
-      }
-
-      .emoji-item {
-        background: white;
-        border-radius: 15px;
-        padding: 10px;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        border: 2px solid transparent;
-      }
-
-      .emoji-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        border-color: #667eea;
-      }
-
-      .emoji-image {
-        width: 30px;
-        height: 30px;
-        object-fit: contain;
-        margin-bottom: 10px;
-        border-radius: 8px;
-      }
-
-      .emoji-description {
-        font-size: 0.85rem;
-        color: #666;
-        font-weight: 500;
-        min-height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      /* 平台颜色主题 */
-      .tieba {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      }
-      .zhihu {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      }
-      .xiaohongshu {
-        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-      }
-      .douyin {
-        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-      }
-      .bilibili {
-        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-      }
-      .weibo {
-        background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%);
-      }
-
-      /* 响应式设计 */
-      @media (max-width: 768px) {
-        .header h1 {
-          font-size: 2rem;
-        }
-
-        .stats {
-          gap: 15px;
-        }
-
-        .emoji-grid {
-          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-          gap: 10px;
-          padding: 20px;
-        }
-
-        .platform-header {
-          padding: 20px;
-          flex-direction: column;
-          gap: 15px;
-          text-align: center;
-        }
-      }
-
-      /* 加载动画 */
-      .loading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 200px;
-        color: #666;
-        font-size: 1.2rem;
-      }
-
-      /* 搜索功能 */
-      .search-container {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      .search-input {
-        background: rgba(255, 255, 255, 0.9);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        border-radius: 25px;
-        padding: 15px 25px;
-        font-size: 1rem;
-        width: 100%;
-        max-width: 400px;
-        outline: none;
-        transition: all 0.3s ease;
-      }
-
-      .search-input:focus {
-        background: white;
-        border-color: #667eea;
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
-      }
-
-      .search-input::placeholder {
-        color: #999;
-      }
-    </style>
+    <title>社区表情包收录工程</title>
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>🎭 各大平台表情包</h1>
+        <h1>🤣国内社区表情包收录</h1>
         <p>收录贴吧、知乎、小红书、抖音、B站、微博表情包</p>
         <div class="stats" id="stats">
           <div class="stat-card">
@@ -276,6 +40,30 @@
     <script>
       let emojiData = [];
       let filteredData = [];
+      let currentOrder = [];
+
+      const ORDER_STORAGE_KEY = "emoji_platform_order";
+
+      function loadStoredOrder(validNames) {
+        try {
+          const raw = localStorage.getItem(ORDER_STORAGE_KEY);
+          if (!raw) return null;
+          const arr = JSON.parse(raw);
+          if (!Array.isArray(arr)) return null;
+          const validSet = new Set(validNames);
+          const filtered = arr.filter((name) => validSet.has(name));
+          const missing = validNames.filter((name) => !filtered.includes(name));
+          return [...filtered, ...missing];
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function saveOrder() {
+        try {
+          localStorage.setItem(ORDER_STORAGE_KEY, JSON.stringify(currentOrder));
+        } catch (e) {}
+      }
 
       // 平台配置
       const platformConfig = {
@@ -293,6 +81,10 @@
           const response = await fetch("emoji.json");
           emojiData = await response.json();
           filteredData = [...emojiData];
+          const names = emojiData.map((p) => p.platform);
+          const stored = loadStoredOrder(names);
+          currentOrder = stored ?? names.slice();
+          applyOrdering();
           renderPlatforms();
           updateStats();
         } catch (error) {
@@ -313,11 +105,12 @@
         }
 
         container.innerHTML = filteredData
-          .map((platform) => {
+          .map((platform, idx) => {
             const config = platformConfig[platform.platform] || {
               icon: "?",
               class: "default",
             };
+            const showMoveUp = idx > 0; // 最顶部的不显示按钮
 
             return `
                     <div class="platform-section">
@@ -328,9 +121,16 @@
             }</div>
                                 ${platform.platform}
                             </div>
-                            <div class="platform-count">${
-                              platform.emojis.length
-                            } 个表情</div>
+                            <div class="platform-actions">
+                                ${
+                                  showMoveUp
+                                    ? `<button class="pin-button" title="上移一位" onclick="moveUp('${platform.platform}')">上移</button>`
+                                    : ""
+                                }
+                                <div class="platform-count">${
+                                  platform.emojis.length
+                                } 个表情</div>
+                            </div>
                         </div>
                         <div class="emoji-grid">
                             ${platform.emojis
@@ -366,6 +166,16 @@
         document.getElementById("totalEmojis").textContent = totalEmojis;
       }
 
+      // 按自定义顺序排序
+      function applyOrdering() {
+        const orderIndex = new Map(currentOrder.map((n, i) => [n, i]));
+        filteredData.sort(
+          (a, b) =>
+            (orderIndex.get(a.platform) ?? 0) -
+            (orderIndex.get(b.platform) ?? 0)
+        );
+      }
+
       // 搜索功能
       function filterEmojis(searchTerm) {
         if (!searchTerm.trim()) {
@@ -376,7 +186,7 @@
               ...platform,
               emojis: platform.emojis.filter(
                 (emoji) =>
-                  emoji.description
+                  (emoji.description || "")
                     .toLowerCase()
                     .includes(searchTerm.toLowerCase()) ||
                   platform.platform
@@ -387,41 +197,55 @@
             .filter((platform) => platform.emojis.length > 0);
         }
 
+        applyOrdering();
         renderPlatforms();
         updateStats();
+      }
+
+      function moveUp(name) {
+        const idx = currentOrder.indexOf(name);
+        if (idx > 0) {
+          const tmp = currentOrder[idx - 1];
+          currentOrder[idx - 1] = currentOrder[idx];
+          currentOrder[idx] = tmp;
+          saveOrder();
+          applyOrdering();
+          renderPlatforms();
+          updateStats();
+        }
       }
 
       // 复制图片到剪贴板
       async function copyImageToClipboard(imageSrc) {
         try {
           // 创建一个临时的 canvas 来处理图片
-          const canvas = document.createElement('canvas');
-          const ctx = canvas.getContext('2d');
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
           const img = new Image();
-          
+
           // 设置跨域属性
-          img.crossOrigin = 'anonymous';
-          
+          img.crossOrigin = "anonymous";
+
           return new Promise((resolve, reject) => {
             img.onload = async () => {
               try {
                 // 设置 canvas 尺寸
                 canvas.width = img.width;
                 canvas.height = img.height;
-                
+
                 // 绘制图片到 canvas
                 ctx.drawImage(img, 0, 0);
-                
+
                 // 将 canvas 转换为 blob
                 canvas.toBlob(async (blob) => {
                   try {
                     // 使用 Clipboard API 复制图片
                     await navigator.clipboard.write([
                       new ClipboardItem({
-                        [blob.type]: blob
-                      })
+                        [blob.type]: blob,
+                      }),
                     ]);
-                    
+
                     showToast("✅ 图片已复制到剪贴板！", "#4CAF50");
                     resolve();
                   } catch (err) {
@@ -430,20 +254,20 @@
                     await fallbackCopyText(imageSrc);
                     resolve();
                   }
-                }, 'image/png');
+                }, "image/png");
               } catch (err) {
                 console.error("处理图片失败:", err);
                 await fallbackCopyText(imageSrc);
                 resolve();
               }
             };
-            
+
             img.onerror = async () => {
               console.error("加载图片失败:", imageSrc);
               await fallbackCopyText(imageSrc);
               resolve();
             };
-            
+
             // 开始加载图片
             img.src = imageSrc;
           });
@@ -452,7 +276,7 @@
           await fallbackCopyText(imageSrc);
         }
       }
-      
+
       // 回退方案：复制文本路径
       async function fallbackCopyText(text) {
         try {
@@ -463,7 +287,7 @@
           showToast("❌ 复制失败，请手动保存图片", "#f44336");
         }
       }
-      
+
       // 显示提示消息
       function showToast(message, backgroundColor = "#4CAF50") {
         const toast = document.createElement("div");
@@ -489,16 +313,6 @@
           }
         }, 3000);
       }
-
-      // 添加 CSS 动画
-      const style = document.createElement("style");
-      style.textContent = `
-            @keyframes fadeInOut {
-                0%, 100% { opacity: 0; transform: translateY(-20px); }
-                10%, 90% { opacity: 1; transform: translateY(0); }
-            }
-        `;
-      document.head.appendChild(style);
 
       // 事件监听
       document.getElementById("searchInput").addEventListener("input", (e) => {

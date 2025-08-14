@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表情包标签系统 V3 (自动加载版)</title>
+    <style>
+      /* CSS样式与之前版本相同，保持不变 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background-color: #f7fafc;
+        color: #2d3748;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      h1,
+      h2 {
+        color: #2c5282;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 0.5rem;
+        margin-top: 2rem;
+      }
+      button {
+        background-color: #4299e1;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.2s;
+      }
+      button:hover {
+        background-color: #2b6cb0;
+      }
+      .instructions {
+        margin: 2rem 0;
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+      .platform-section {
+        margin-top: 2rem;
+      }
+      .emoji-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .emoji-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border: 1px solid #e2e8f0;
+      }
+      .emoji-preview {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      .emoji-preview img {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+      }
+      .emoji-preview .url {
+        font-size: 12px;
+        color: #718096;
+        word-break: break-all;
+      }
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 14px;
+      }
+      .form-group input[type="text"] {
+        width: calc(100% - 16px);
+        padding: 8px;
+        border: 1px solid #cbd5e0;
+        border-radius: 4px;
+      }
+      .tag-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding-top: 0.25rem;
+      }
+      .tag-group label {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 4px 10px;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        user-select: none;
+      }
+      .tag-group input {
+        margin-right: 5px;
+      }
+      #output-area {
+        margin-top: 3rem;
+      }
+      #output-json {
+        width: 100%;
+        height: 400px;
+        font-family: monospace;
+        background-color: #edf2f7;
+        border: 1px solid #cbd5e0;
+        border-radius: 5px;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>表情包在线命名 & 打标签工具 (V3)</h1>
+
+      <div id="tagging-root"></div>
+
+      <div id="output-area">
+        <h2><strong>最后一步</strong>：生成并下载带有标签的JSON</h2>
+        <button id="generate-btn">生成并下载 tagged_emoji.json</button>
+        <p style="margin-top: 1rem">最终生成的JSON预览：</p>
+        <textarea id="output-json" readonly></textarea>
+      </div>
+    </div>
+
+    <script>
+      // --- 1. 定义所需变量和预设标签 ---
+      const taggingRoot = document.getElementById("tagging-root");
+      const generateBtn = document.getElementById("generate-btn");
+      const outputJsonTextarea = document.getElementById("output-json");
+
+      const availableTags = [
+        "positive",
+        "negative",
+        "neutral",
+        "funny",
+        "celebratory",
+        "sarcastic",
+        "money",
+        "time",
+        "growth",
+        "struggle",
+        "thinking",
+        "greeting",
+        "call_to_action",
+      ];
+
+      let emojiData = [];
+
+      // --- 2. 页面加载时自动获取和渲染数据 ---
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const response = await fetch("emoji.json");
+          if (!response.ok) {
+            throw new Error(
+              `HTTP error! status: ${response.status}. 请确保 emoji.json 文件与此html在同一目录下，并且您正在使用本地服务器访问。`
+            );
+          }
+          emojiData = await response.json();
+          renderTaggerUI();
+        } catch (err) {
+          taggingRoot.innerHTML = `<p style="color: red;"><strong>加载失败：</strong>${err.message}</p>`;
+          console.error(err);
+        }
+      });
+
+      // --- 3. 渲染UI界面的函数 (与之前版本相同) ---
+      function renderTaggerUI() {
+        emojiData.forEach((platformData, platformIndex) => {
+          const section = document.createElement("div");
+          section.className = "platform-section";
+
+          const title = document.createElement("h2");
+          title.textContent = `平台：${platformData.platform}`;
+          section.appendChild(title);
+
+          const grid = document.createElement("div");
+          grid.className = "emoji-grid";
+
+          platformData.emojis.forEach((emoji, emojiIndex) => {
+            const card = document.createElement("div");
+            card.className = "emoji-card";
+            const preview = document.createElement("div");
+            preview.className = "emoji-preview";
+            const img = document.createElement("img");
+            img.src = emoji.url;
+            img.alt = emoji.description || emoji.url;
+            const urlText = document.createElement("span");
+            urlText.className = "url";
+            urlText.textContent = emoji.url;
+            preview.appendChild(img);
+            preview.appendChild(urlText);
+
+            const descGroup = document.createElement("div");
+            descGroup.className = "form-group";
+            const descLabel = document.createElement("label");
+            descLabel.textContent = "名称 (Description)";
+            const descInput = document.createElement("input");
+            descInput.type = "text";
+            descInput.value = emoji.description;
+            descInput.oninput = (e) => {
+              emojiData[platformIndex].emojis[emojiIndex].description =
+                e.target.value;
+              updateJsonPreview();
+            };
+            descGroup.appendChild(descLabel);
+            descGroup.appendChild(descInput);
+
+            const tagsGroup = document.createElement("div");
+            tagsGroup.className = "form-group";
+            const tagsLabel = document.createElement("label");
+            tagsLabel.textContent = "标签 (Tags)";
+            const tagsContainer = document.createElement("div");
+            tagsContainer.className = "tag-group";
+
+            availableTags.forEach((tag) => {
+              const label = document.createElement("label");
+              const checkbox = document.createElement("input");
+              checkbox.type = "checkbox";
+              checkbox.value = tag;
+              if (emoji.tags.includes(tag)) {
+                checkbox.checked = true;
+              }
+              checkbox.onchange = (e) => {
+                const currentTags = new Set(
+                  emojiData[platformIndex].emojis[emojiIndex].tags
+                );
+                if (e.target.checked) {
+                  currentTags.add(tag);
+                } else {
+                  currentTags.delete(tag);
+                }
+                emojiData[platformIndex].emojis[emojiIndex].tags =
+                  Array.from(currentTags);
+                updateJsonPreview();
+              };
+              label.appendChild(checkbox);
+              label.append(tag);
+              tagsContainer.appendChild(label);
+            });
+
+            tagsGroup.appendChild(tagsLabel);
+            tagsGroup.appendChild(tagsContainer);
+
+            card.appendChild(preview);
+            card.appendChild(descGroup);
+            card.appendChild(tagsGroup);
+            grid.appendChild(card);
+          });
+
+          section.appendChild(grid);
+          taggingRoot.appendChild(section);
+        });
+
+        updateJsonPreview();
+      }
+
+      // --- 4. 更新预览和生成下载 (与之前版本相同) ---
+      function updateJsonPreview() {
+        outputJsonTextarea.value = JSON.stringify(emojiData, null, 2);
+      }
+
+      generateBtn.addEventListener("click", () => {
+        if (emojiData.length === 0) {
+          alert("数据未加载，无法生成！");
+          return;
+        }
+        const jsonString = JSON.stringify(emojiData, null, 2);
+        const blob = new Blob([jsonString], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "tagged_emoji.json";
+
+        document.body.appendChild(link);
+        link.click();
+
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      });
+    </script>
+  </body>
+</html>
