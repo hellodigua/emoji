@@ -4,157 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>表情包标签系统 V3 (自动加载版)</title>
-    <style>
-      /* CSS样式与之前版本相同，保持不变 */
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          sans-serif;
-        background-color: #f7fafc;
-        color: #2d3748;
-        padding: 2rem;
-        line-height: 1.6;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      h1,
-      h2 {
-        color: #2c5282;
-        border-bottom: 2px solid #e2e8f0;
-        padding-bottom: 0.5rem;
-        margin-top: 2rem;
-      }
-      button {
-        background-color: #4299e1;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.2s;
-      }
-      button:hover {
-        background-color: #2b6cb0;
-      }
-      .instructions {
-        margin: 2rem 0;
-        background: #fff;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      }
-      .platform-section {
-        margin-top: 2rem;
-      }
-      .emoji-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1.5rem;
-      }
-      .emoji-card {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-        border: 1px solid #e2e8f0;
-      }
-      .emoji-preview {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
-      }
-      .emoji-preview img {
-        width: 60px;
-        height: 60px;
-        flex-shrink: 0;
-      }
-      .desc-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-      }
-      .desc-label {
-        font-size: 14px;
-        font-weight: 600;
-        color: #2d3748;
-        margin: 0;
-      }
-      .desc-input {
-        padding: 8px;
-        border: 1px solid #cbd5e0;
-        border-radius: 4px;
-        font-size: 14px;
-      }
-      .form-group {
-        margin-bottom: 1rem;
-      }
-      .form-group label {
-        display: block;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        font-size: 14px;
-      }
-      .form-group input[type="text"] {
-        width: calc(100% - 16px);
-        padding: 8px;
-        border: 1px solid #cbd5e0;
-        border-radius: 4px;
-      }
-      .tag-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        padding-top: 0.25rem;
-      }
-      .tag-group label {
-        display: flex;
-        align-items: center;
-        font-size: 13px;
-        cursor: pointer;
-        padding: 4px 10px;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
-        user-select: none;
-      }
-      .tag-group input {
-        margin-right: 5px;
-      }
-      .tag-category {
-        margin-bottom: 1.5rem;
-        padding: 1rem;
-        background: #f8fafc;
-        border-radius: 6px;
-        border: 1px solid #e2e8f0;
-      }
-      .tag-category-title {
-        font-weight: 600;
-        color: #2d3748;
-        margin-bottom: 0.25rem;
-        font-size: 14px;
-      }
-      .tag-category-desc {
-        font-size: 12px;
-        color: #718096;
-        margin-bottom: 0.75rem;
-      }
-      #output-area {
-        margin-top: 3rem;
-      }
-      #output-json {
-        width: 100%;
-        height: 400px;
-        font-family: monospace;
-        background-color: #edf2f7;
-        border: 1px solid #cbd5e0;
-        border-radius: 5px;
-        padding: 1rem;
-        box-sizing: border-box;
-      }
-    </style>
+    <link rel="stylesheet" href="assets/config-style.css" />
   </head>
   <body>
     <div class="container">
@@ -166,6 +16,12 @@
         <p><strong>意图轴</strong>：使用表情的目的和意图 - praise(赞美)、agree(赞同)、question(疑问)、celebrate(庆祝)、comfort(安慰)、refute(反驳)、show-off(炫耀)</p>
         <p><strong>风格轴</strong>：情绪和意图的表达方式 - funny(搞笑)、irony(反讽)、cute(可爱)、exaggerate(夸张)、shy(害羞)</p>
         <p style="color: #718096; font-size: 14px;">💡 每个轴都可以多选，一个表情可以同时具有多个维度的特征</p>
+      </div>
+
+      <div class="cache-info" id="cache-info">💾 加载缓存状态中...</div>
+      <div class="cache-actions">
+        <button id="load-from-json-btn">从JSON重新加载</button>
+        <button id="clear-cache-btn" class="clear-cache-btn">清除所有缓存</button>
       </div>
 
       <div id="tagging-root"></div>
@@ -222,17 +78,77 @@
 
       let emojiData = [];
 
+      // --- 缓存管理函数 ---
+      const CACHE_KEY = 'emoji_config_cache';
+      
+      function saveToCache() {
+        try {
+          localStorage.setItem(CACHE_KEY, JSON.stringify(emojiData));
+          updateCacheStatus();
+        } catch (error) {
+          console.error('保存缓存失败:', error);
+        }
+      }
+      
+      function loadFromCache() {
+        try {
+          const cached = localStorage.getItem(CACHE_KEY);
+          return cached ? JSON.parse(cached) : null;
+        } catch (error) {
+          console.error('加载缓存失败:', error);
+          return null;
+        }
+      }
+      
+      function clearCache() {
+        localStorage.removeItem(CACHE_KEY);
+        updateCacheStatus();
+      }
+      
+      function updateCacheStatus() {
+        const cacheInfo = document.getElementById('cache-info');
+        const cached = loadFromCache();
+        if (cached && cacheInfo) {
+          let totalEmojis = 0;
+          let taggedEmojis = 0;
+          cached.forEach(platform => {
+            platform.emojis.forEach(emoji => {
+              totalEmojis++;
+              if ((emoji.name || emoji.description) || emoji.tags.length > 0) {
+                taggedEmojis++;
+              }
+            });
+          });
+          cacheInfo.textContent = `💾 已缓存进度：${taggedEmojis}/${totalEmojis} 个表情已标注`;
+        } else if (cacheInfo) {
+          cacheInfo.textContent = '💾 暂无缓存数据';
+        }
+      }
+
       // --- 2. 页面加载时自动获取和渲染数据 ---
       document.addEventListener("DOMContentLoaded", async () => {
         try {
-          const response = await fetch("emoji.json");
-          if (!response.ok) {
-            throw new Error(
-              `HTTP error! status: ${response.status}. 请确保 emoji.json 文件与此html在同一目录下，并且您正在使用本地服务器访问。`
-            );
+          // 优先从缓存加载数据
+          const cachedData = loadFromCache();
+          
+          if (cachedData) {
+            emojiData = cachedData;
+            renderTaggerUI();
+            updateCacheStatus();
+            console.log('从缓存加载数据成功');
+          } else {
+            // 缓存无数据时从json文件加载
+            const response = await fetch("emoji.json");
+            if (!response.ok) {
+              throw new Error(
+                `HTTP error! status: ${response.status}. 请确保 emoji.json 文件与此html在同一目录下，并且您正在使用本地服务器访问。`
+              );
+            }
+            emojiData = await response.json();
+            renderTaggerUI();
+            updateCacheStatus();
+            console.log('从JSON文件加载数据成功');
           }
-          emojiData = await response.json();
-          renderTaggerUI();
         } catch (err) {
           taggingRoot.innerHTML = `<p style="color: red;"><strong>加载失败：</strong>${err.message}</p>`;
           console.error(err);
@@ -259,7 +175,7 @@
             preview.className = "emoji-preview";
             const img = document.createElement("img");
             img.src = emoji.url;
-            img.alt = emoji.description || emoji.url;
+            img.alt = emoji.name || emoji.description || emoji.url;
             
             const descContainer = document.createElement("div");
             descContainer.className = "desc-container";
@@ -268,12 +184,17 @@
             descLabel.className = "desc-label";
             const descInput = document.createElement("input");
             descInput.type = "text";
-            descInput.value = emoji.description;
+            descInput.value = emoji.name || emoji.description || "";
             descInput.className = "desc-input";
             descInput.oninput = (e) => {
-              emojiData[platformIndex].emojis[emojiIndex].description =
-                e.target.value;
+              // 优先使用name字段，如果没有则使用description字段兼容旧数据
+              if (emojiData[platformIndex].emojis[emojiIndex].hasOwnProperty('name')) {
+                emojiData[platformIndex].emojis[emojiIndex].name = e.target.value;
+              } else {
+                emojiData[platformIndex].emojis[emojiIndex].description = e.target.value;
+              }
               updateJsonPreview();
+              saveToCache();
             };
             descContainer.appendChild(descLabel);
             descContainer.appendChild(descInput);
@@ -322,6 +243,7 @@
                   emojiData[platformIndex].emojis[emojiIndex].tags =
                     Array.from(currentTags);
                   updateJsonPreview();
+                  saveToCache();
                 };
                 label.appendChild(checkbox);
                 label.append(tag.label);
@@ -369,6 +291,33 @@
 
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
+      });
+
+      // --- 缓存管理按钮事件 ---
+      document.getElementById("load-from-json-btn").addEventListener("click", async () => {
+        if (confirm("确定要从JSON文件重新加载数据吗？这将覆盖当前的缓存数据。")) {
+          try {
+            const response = await fetch("emoji.json");
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            emojiData = await response.json();
+            saveToCache();
+            taggingRoot.innerHTML = "";
+            renderTaggerUI();
+            updateCacheStatus();
+            alert("已从JSON文件重新加载数据并更新缓存！");
+          } catch (error) {
+            alert("加载失败：" + error.message);
+          }
+        }
+      });
+
+      document.getElementById("clear-cache-btn").addEventListener("click", () => {
+        if (confirm("确定要清除所有缓存数据吗？这将不会影响JSON文件，但会丢失未保存的标注进度。")) {
+          clearCache();
+          alert("缓存已清除！下次刷新页面将从JSON文件重新加载数据。");
+        }
       });
     </script>
   </body>

@@ -140,11 +140,11 @@
                                   emoji.url
                                 }')">
                                     <img src="${emoji.url}" alt="${
-                                  emoji.description || "表情"
+                                  emoji.name || "表情"
                                 }" class="emoji-image"
                                          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iOCIgZmlsbD0iI0Y1RjVGNSIvPgo8dGV4dCB4PSIzMCIgeT0iMzUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+YvjwvdGV4dD4KPHN2Zz4K'">
-                                    <div class="emoji-description">${
-                                      emoji.description || `表情 ${index + 1}`
+                                    <div class="emoji-name">${
+                                      emoji.name || `表情 ${index + 1}`
                                     }</div>
                                 </div>
                             `
@@ -186,7 +186,7 @@
               ...platform,
               emojis: platform.emojis.filter(
                 (emoji) =>
-                  (emoji.description || "")
+                  (emoji.name || "")
                     .toLowerCase()
                     .includes(searchTerm.toLowerCase()) ||
                   platform.platform
