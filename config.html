@@ -71,10 +71,23 @@
         height: 60px;
         flex-shrink: 0;
       }
-      .emoji-preview .url {
-        font-size: 12px;
-        color: #718096;
-        word-break: break-all;
+      .desc-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .desc-label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #2d3748;
+        margin: 0;
+      }
+      .desc-input {
+        padding: 8px;
+        border: 1px solid #cbd5e0;
+        border-radius: 4px;
+        font-size: 14px;
       }
       .form-group {
         margin-bottom: 1rem;
@@ -110,6 +123,24 @@
       .tag-group input {
         margin-right: 5px;
       }
+      .tag-category {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: #f8fafc;
+        border-radius: 6px;
+        border: 1px solid #e2e8f0;
+      }
+      .tag-category-title {
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 0.25rem;
+        font-size: 14px;
+      }
+      .tag-category-desc {
+        font-size: 12px;
+        color: #718096;
+        margin-bottom: 0.75rem;
+      }
       #output-area {
         margin-top: 3rem;
       }
@@ -129,6 +160,14 @@
     <div class="container">
       <h1>表情包在线命名 & 打标签工具 (V3)</h1>
 
+      <div class="instructions">
+        <h2>三轴标签体系说明</h2>
+        <p><strong>情感轴</strong>：表情传递的核心情绪色彩 - positive(积极)、negative(消极)、neutral(中性)</p>
+        <p><strong>意图轴</strong>：使用表情的目的和意图 - praise(赞美)、agree(赞同)、question(疑问)、celebrate(庆祝)、comfort(安慰)、refute(反驳)、show-off(炫耀)</p>
+        <p><strong>风格轴</strong>：情绪和意图的表达方式 - funny(搞笑)、irony(反讽)、cute(可爱)、exaggerate(夸张)、shy(害羞)</p>
+        <p style="color: #718096; font-size: 14px;">💡 每个轴都可以多选，一个表情可以同时具有多个维度的特征</p>
+      </div>
+
       <div id="tagging-root"></div>
 
       <div id="output-area">
@@ -145,21 +184,41 @@
       const generateBtn = document.getElementById("generate-btn");
       const outputJsonTextarea = document.getElementById("output-json");
 
-      const availableTags = [
-        "positive",
-        "negative",
-        "neutral",
-        "funny",
-        "celebratory",
-        "sarcastic",
-        "money",
-        "time",
-        "growth",
-        "struggle",
-        "thinking",
-        "greeting",
-        "call_to_action",
-      ];
+      const tagCategories = {
+        sentiment: {
+          title: "情感轴",
+          description: "表情传递的核心情绪色彩",
+          tags: [
+            { value: "positive", label: "积极" },
+            { value: "negative", label: "消极" },
+            { value: "neutral", label: "中性" }
+          ]
+        },
+        intent: {
+          title: "意图轴", 
+          description: "使用表情的目的和意图",
+          tags: [
+            { value: "praise", label: "赞美" },
+            { value: "agree", label: "赞同" },
+            { value: "question", label: "疑问" },
+            { value: "celebrate", label: "庆祝" },
+            { value: "comfort", label: "安慰" },
+            { value: "refute", label: "反驳" },
+            { value: "show-off", label: "炫耀" }
+          ]
+        },
+        style: {
+          title: "风格轴",
+          description: "情绪和意图的表达方式",
+          tags: [
+            { value: "funny", label: "搞笑" },
+            { value: "irony", label: "反讽" },
+            { value: "cute", label: "可爱" },
+            { value: "exaggerate", label: "夸张" },
+            { value: "shy", label: "害羞" }
+          ]
+        }
+      };
 
       let emojiData = [];
 
@@ -201,65 +260,81 @@
             const img = document.createElement("img");
             img.src = emoji.url;
             img.alt = emoji.description || emoji.url;
-            const urlText = document.createElement("span");
-            urlText.className = "url";
-            urlText.textContent = emoji.url;
-            preview.appendChild(img);
-            preview.appendChild(urlText);
-
-            const descGroup = document.createElement("div");
-            descGroup.className = "form-group";
+            
+            const descContainer = document.createElement("div");
+            descContainer.className = "desc-container";
             const descLabel = document.createElement("label");
-            descLabel.textContent = "名称 (Description)";
+            descLabel.textContent = "名称";
+            descLabel.className = "desc-label";
             const descInput = document.createElement("input");
             descInput.type = "text";
             descInput.value = emoji.description;
+            descInput.className = "desc-input";
             descInput.oninput = (e) => {
               emojiData[platformIndex].emojis[emojiIndex].description =
                 e.target.value;
               updateJsonPreview();
             };
-            descGroup.appendChild(descLabel);
-            descGroup.appendChild(descInput);
+            descContainer.appendChild(descLabel);
+            descContainer.appendChild(descInput);
+            
+            preview.appendChild(img);
+            preview.appendChild(descContainer);
 
             const tagsGroup = document.createElement("div");
             tagsGroup.className = "form-group";
             const tagsLabel = document.createElement("label");
-            tagsLabel.textContent = "标签 (Tags)";
-            const tagsContainer = document.createElement("div");
-            tagsContainer.className = "tag-group";
+            tagsLabel.textContent = "标签分类 (Tag Categories)";
+            tagsGroup.appendChild(tagsLabel);
 
-            availableTags.forEach((tag) => {
-              const label = document.createElement("label");
-              const checkbox = document.createElement("input");
-              checkbox.type = "checkbox";
-              checkbox.value = tag;
-              if (emoji.tags.includes(tag)) {
-                checkbox.checked = true;
-              }
-              checkbox.onchange = (e) => {
-                const currentTags = new Set(
-                  emojiData[platformIndex].emojis[emojiIndex].tags
-                );
-                if (e.target.checked) {
-                  currentTags.add(tag);
-                } else {
-                  currentTags.delete(tag);
+            Object.entries(tagCategories).forEach(([categoryKey, category]) => {
+              const categoryDiv = document.createElement("div");
+              categoryDiv.className = "tag-category";
+              
+              const categoryTitle = document.createElement("div");
+              categoryTitle.className = "tag-category-title";
+              categoryTitle.textContent = category.title;
+              
+              const categoryDesc = document.createElement("div");
+              categoryDesc.className = "tag-category-desc";
+              categoryDesc.textContent = category.description;
+              
+              const tagsContainer = document.createElement("div");
+              tagsContainer.className = "tag-group";
+
+              category.tags.forEach((tag) => {
+                const label = document.createElement("label");
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.value = tag.value;
+                if (emoji.tags.includes(tag.value)) {
+                  checkbox.checked = true;
                 }
-                emojiData[platformIndex].emojis[emojiIndex].tags =
-                  Array.from(currentTags);
-                updateJsonPreview();
-              };
-              label.appendChild(checkbox);
-              label.append(tag);
-              tagsContainer.appendChild(label);
+                checkbox.onchange = (e) => {
+                  const currentTags = new Set(
+                    emojiData[platformIndex].emojis[emojiIndex].tags
+                  );
+                  if (e.target.checked) {
+                    currentTags.add(tag.value);
+                  } else {
+                    currentTags.delete(tag.value);
+                  }
+                  emojiData[platformIndex].emojis[emojiIndex].tags =
+                    Array.from(currentTags);
+                  updateJsonPreview();
+                };
+                label.appendChild(checkbox);
+                label.append(tag.label);
+                tagsContainer.appendChild(label);
+              });
+
+              categoryDiv.appendChild(categoryTitle);
+              categoryDiv.appendChild(categoryDesc);
+              categoryDiv.appendChild(tagsContainer);
+              tagsGroup.appendChild(categoryDiv);
             });
 
-            tagsGroup.appendChild(tagsLabel);
-            tagsGroup.appendChild(tagsContainer);
-
             card.appendChild(preview);
-            card.appendChild(descGroup);
             card.appendChild(tagsGroup);
             grid.appendChild(card);
           });
