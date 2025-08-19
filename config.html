@@ -12,16 +12,29 @@
 
       <div class="instructions">
         <h2>三轴标签体系说明</h2>
-        <p><strong>情感轴</strong>：表情传递的核心情绪色彩 - positive(积极)、negative(消极)、neutral(中性)</p>
-        <p><strong>意图轴</strong>：使用表情的目的和意图 - praise(赞美)、agree(赞同)、question(疑问)、celebrate(庆祝)、comfort(安慰)、refute(反驳)、show-off(炫耀)</p>
-        <p><strong>风格轴</strong>：情绪和意图的表达方式 - funny(搞笑)、irony(反讽)、cute(可爱)、exaggerate(夸张)、shy(害羞)</p>
-        <p style="color: #718096; font-size: 14px;">💡 每个轴都可以多选，一个表情可以同时具有多个维度的特征</p>
+        <p>
+          <strong>情感轴</strong>：表情传递的核心情绪色彩 -
+          positive(积极)、negative(消极)、neutral(中性)
+        </p>
+        <p>
+          <strong>意图轴</strong>：使用表情的目的和意图 -
+          praise(赞美)、agree(赞同)、question(疑问)、celebrate(庆祝)、comfort(安慰)、refute(反驳)、show-off(炫耀)
+        </p>
+        <p>
+          <strong>风格轴</strong>：情绪和意图的表达方式 -
+          funny(搞笑)、irony(反讽)、cute(可爱)、exaggerate(夸张)、shy(害羞)
+        </p>
+        <p style="color: #718096; font-size: 14px">
+          💡 每个轴都可以多选，一个表情可以同时具有多个维度的特征
+        </p>
       </div>
 
       <div class="cache-info" id="cache-info">💾 加载缓存状态中...</div>
       <div class="cache-actions">
         <button id="load-from-json-btn">从JSON重新加载</button>
-        <button id="clear-cache-btn" class="clear-cache-btn">清除所有缓存</button>
+        <button id="clear-cache-btn" class="clear-cache-btn">
+          清除所有缓存
+        </button>
       </div>
 
       <div id="tagging-root"></div>
@@ -47,11 +60,11 @@
           tags: [
             { value: "positive", label: "积极" },
             { value: "negative", label: "消极" },
-            { value: "neutral", label: "中性" }
-          ]
+            { value: "neutral", label: "中性" },
+          ],
         },
         intent: {
-          title: "意图轴", 
+          title: "意图轴",
           description: "使用表情的目的和意图",
           tags: [
             { value: "praise", label: "赞美" },
@@ -60,8 +73,8 @@
             { value: "celebrate", label: "庆祝" },
             { value: "comfort", label: "安慰" },
             { value: "refute", label: "反驳" },
-            { value: "show-off", label: "炫耀" }
-          ]
+            { value: "show-off", label: "炫耀" },
+          ],
         },
         style: {
           title: "风格轴",
@@ -71,57 +84,57 @@
             { value: "irony", label: "反讽" },
             { value: "cute", label: "可爱" },
             { value: "exaggerate", label: "夸张" },
-            { value: "shy", label: "害羞" }
-          ]
-        }
+            { value: "shy", label: "害羞" },
+          ],
+        },
       };
 
       let emojiData = [];
 
       // --- 缓存管理函数 ---
-      const CACHE_KEY = 'emoji_config_cache';
-      
+      const CACHE_KEY = "emoji_config_cache";
+
       function saveToCache() {
         try {
           localStorage.setItem(CACHE_KEY, JSON.stringify(emojiData));
           updateCacheStatus();
         } catch (error) {
-          console.error('保存缓存失败:', error);
+          console.error("保存缓存失败:", error);
         }
       }
-      
+
       function loadFromCache() {
         try {
           const cached = localStorage.getItem(CACHE_KEY);
           return cached ? JSON.parse(cached) : null;
         } catch (error) {
-          console.error('加载缓存失败:', error);
+          console.error("加载缓存失败:", error);
           return null;
         }
       }
-      
+
       function clearCache() {
         localStorage.removeItem(CACHE_KEY);
         updateCacheStatus();
       }
-      
+
       function updateCacheStatus() {
-        const cacheInfo = document.getElementById('cache-info');
+        const cacheInfo = document.getElementById("cache-info");
         const cached = loadFromCache();
         if (cached && cacheInfo) {
           let totalEmojis = 0;
           let taggedEmojis = 0;
-          cached.forEach(platform => {
-            platform.emojis.forEach(emoji => {
+          cached.forEach((platform) => {
+            platform.emojis.forEach((emoji) => {
               totalEmojis++;
-              if ((emoji.name || emoji.description) || emoji.tags.length > 0) {
+              if (emoji.name || emoji.description || emoji.tags.length > 0) {
                 taggedEmojis++;
               }
             });
           });
           cacheInfo.textContent = `💾 已缓存进度：${taggedEmojis}/${totalEmojis} 个表情已标注`;
         } else if (cacheInfo) {
-          cacheInfo.textContent = '💾 暂无缓存数据';
+          cacheInfo.textContent = "💾 暂无缓存数据";
         }
       }
 
@@ -130,12 +143,12 @@
         try {
           // 优先从缓存加载数据
           const cachedData = loadFromCache();
-          
+
           if (cachedData) {
             emojiData = cachedData;
             renderTaggerUI();
             updateCacheStatus();
-            console.log('从缓存加载数据成功');
+            console.log("从缓存加载数据成功");
           } else {
             // 缓存无数据时从json文件加载
             const response = await fetch("emoji.json");
@@ -147,7 +160,7 @@
             emojiData = await response.json();
             renderTaggerUI();
             updateCacheStatus();
-            console.log('从JSON文件加载数据成功');
+            console.log("从JSON文件加载数据成功");
           }
         } catch (err) {
           taggingRoot.innerHTML = `<p style="color: red;"><strong>加载失败：</strong>${err.message}</p>`;
@@ -176,7 +189,7 @@
             const img = document.createElement("img");
             img.src = emoji.url;
             img.alt = emoji.name || emoji.description || emoji.url;
-            
+
             const descContainer = document.createElement("div");
             descContainer.className = "desc-container";
             const descLabel = document.createElement("label");
@@ -188,17 +201,23 @@
             descInput.className = "desc-input";
             descInput.oninput = (e) => {
               // 优先使用name字段，如果没有则使用description字段兼容旧数据
-              if (emojiData[platformIndex].emojis[emojiIndex].hasOwnProperty('name')) {
-                emojiData[platformIndex].emojis[emojiIndex].name = e.target.value;
+              if (
+                emojiData[platformIndex].emojis[emojiIndex].hasOwnProperty(
+                  "name"
+                )
+              ) {
+                emojiData[platformIndex].emojis[emojiIndex].name =
+                  e.target.value;
               } else {
-                emojiData[platformIndex].emojis[emojiIndex].description = e.target.value;
+                emojiData[platformIndex].emojis[emojiIndex].description =
+                  e.target.value;
               }
               updateJsonPreview();
               saveToCache();
             };
             descContainer.appendChild(descLabel);
             descContainer.appendChild(descInput);
-            
+
             preview.appendChild(img);
             preview.appendChild(descContainer);
 
@@ -211,15 +230,21 @@
             Object.entries(tagCategories).forEach(([categoryKey, category]) => {
               const categoryDiv = document.createElement("div");
               categoryDiv.className = "tag-category";
-              
+
+              const categoryHeader = document.createElement("div");
+              categoryHeader.className = "tag-category-header";
+
               const categoryTitle = document.createElement("div");
               categoryTitle.className = "tag-category-title";
               categoryTitle.textContent = category.title;
-              
+
               const categoryDesc = document.createElement("div");
               categoryDesc.className = "tag-category-desc";
               categoryDesc.textContent = category.description;
-              
+
+              categoryHeader.appendChild(categoryTitle);
+              categoryHeader.appendChild(categoryDesc);
+
               const tagsContainer = document.createElement("div");
               tagsContainer.className = "tag-group";
 
@@ -250,8 +275,7 @@
                 tagsContainer.appendChild(label);
               });
 
-              categoryDiv.appendChild(categoryTitle);
-              categoryDiv.appendChild(categoryDesc);
+              categoryDiv.appendChild(categoryHeader);
               categoryDiv.appendChild(tagsContainer);
               tagsGroup.appendChild(categoryDiv);
             });
@@ -294,31 +318,39 @@
       });
 
       // --- 缓存管理按钮事件 ---
-      document.getElementById("load-from-json-btn").addEventListener("click", async () => {
-        if (confirm("确定要从JSON文件重新加载数据吗？这将覆盖当前的缓存数据。")) {
-          try {
-            const response = await fetch("emoji.json");
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
+      document
+        .getElementById("load-from-json-btn")
+        .addEventListener("click", async () => {
+          if (
+            confirm("确定要从JSON文件重新加载数据吗？这将覆盖当前的缓存数据。")
+          ) {
+            try {
+              const response = await fetch("emoji.json");
+              if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              emojiData = await response.json();
+              saveToCache();
+              taggingRoot.innerHTML = "";
+              renderTaggerUI();
+              updateCacheStatus();
+            } catch (error) {
+              alert("加载失败：" + error.message);
             }
-            emojiData = await response.json();
-            saveToCache();
-            taggingRoot.innerHTML = "";
-            renderTaggerUI();
-            updateCacheStatus();
-            alert("已从JSON文件重新加载数据并更新缓存！");
-          } catch (error) {
-            alert("加载失败：" + error.message);
           }
-        }
-      });
+        });
 
-      document.getElementById("clear-cache-btn").addEventListener("click", () => {
-        if (confirm("确定要清除所有缓存数据吗？这将不会影响JSON文件，但会丢失未保存的标注进度。")) {
-          clearCache();
-          alert("缓存已清除！下次刷新页面将从JSON文件重新加载数据。");
-        }
-      });
+      document
+        .getElementById("clear-cache-btn")
+        .addEventListener("click", () => {
+          if (
+            confirm(
+              "确定要清除所有缓存数据吗？这将不会影响JSON文件，但会丢失未保存的标注进度。"
+            )
+          ) {
+            clearCache();
+          }
+        });
     </script>
   </body>
 </html>
