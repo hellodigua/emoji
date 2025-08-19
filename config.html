@@ -127,7 +127,7 @@
           cached.forEach((platform) => {
             platform.emojis.forEach((emoji) => {
               totalEmojis++;
-              if (emoji.name || emoji.description || emoji.tags.length > 0) {
+              if (emoji.name || emoji.tags.length > 0) {
                 taggedEmojis++;
               }
             });
@@ -200,17 +200,11 @@
             descInput.value = emoji.name || emoji.description || "";
             descInput.className = "desc-input";
             descInput.oninput = (e) => {
-              // 优先使用name字段，如果没有则使用description字段兼容旧数据
-              if (
-                emojiData[platformIndex].emojis[emojiIndex].hasOwnProperty(
-                  "name"
-                )
-              ) {
-                emojiData[platformIndex].emojis[emojiIndex].name =
-                  e.target.value;
-              } else {
-                emojiData[platformIndex].emojis[emojiIndex].description =
-                  e.target.value;
+              // 统一使用name字段，移除description字段
+              emojiData[platformIndex].emojis[emojiIndex].name = e.target.value;
+              // 如果存在description字段，删除它
+              if (emojiData[platformIndex].emojis[emojiIndex].hasOwnProperty('description')) {
+                delete emojiData[platformIndex].emojis[emojiIndex].description;
               }
               updateJsonPreview();
               saveToCache();
