@@ -24,14 +24,14 @@ class EmojiCompressor:
         self.quality = quality
         self.verbose = verbose
 
-        # 平台目录映射
+        # 平台目录映射 (现在origins目录已统一为英文名)
         self.platform_mapping = {
-            '贴吧': 'tieba',
-            '知乎': 'zhihu',
-            '小红书': 'xiaohongshu',
-            '抖音': 'douyin',
-            'B站': 'bilibili',
-            '微博': 'weibo'
+            'tieba': 'tieba',
+            'zhihu': 'zhihu',
+            'xiaohongshu': 'xiaohongshu',
+            'douyin': 'douyin',
+            'bilibili': 'bilibili',
+            'weibo': 'weibo'
         }
 
         # 检查并初始化工具
