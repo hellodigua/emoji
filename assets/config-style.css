@@ -191,3 +191,25 @@ button:hover {
 .clear-cache-btn:hover {
   background-color: #c53030 !important;
 }
+
+/* Keywords编辑样式 */
+.keywords-container {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.keywords-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+.keywords-input {
+  padding: 8px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}

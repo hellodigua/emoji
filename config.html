@@ -17,11 +17,11 @@
           positive(积极)、negative(消极)、neutral(中性)
         </p>
         <p>
-          <strong>风格轴</strong>：表情的表达方式 -
-          funny(搞笑)、irony(反讽)、cute(可爱)、exaggerate(夸张)、shy(害羞)、yygq(阴阳怪气)、abstract(抽象)
+          <strong>文案风格轴</strong>：表情的文案表达风格 -
+          supportive(鼓励安慰)、sarcastic(阴阳怪气)、humorous(幽默)、surreal(抽象)、playful(俏皮)、plain(通用)
         </p>
         <p style="color: #718096; font-size: 14px">
-          💡 每个轴都可以多选，一个表情可以同时具有多种情感色彩和表达方式
+          💡 每个轴都可以多选，一个表情可以同时具有多种情感色彩和文案风格
         </p>
       </div>
 
@@ -60,16 +60,15 @@
           ],
         },
         style: {
-          title: "风格轴",
-          description: "表情的表达方式",
+          title: "文案风格轴",
+          description: "表情的文案表达风格",
           tags: [
-            { value: "funny", label: "搞笑" },
-            { value: "irony", label: "反讽" },
-            { value: "cute", label: "可爱" },
-            { value: "exaggerate", label: "夸张" },
-            { value: "shy", label: "害羞" },
-            { value: "yygq", label: "阴阳怪气" },
-            { value: "abstract", label: "抽象" },
+            { value: "supportive", label: "鼓励安慰" },
+            { value: "sarcastic", label: "阴阳怪气" },
+            { value: "humorous", label: "幽默" },
+            { value: "surreal", label: "抽象" },
+            { value: "playful", label: "俏皮" },
+            { value: "plain", label: "通用" },
           ],
         },
       };
@@ -112,7 +111,7 @@
           cached.forEach((platform) => {
             platform.emojis.forEach((emoji) => {
               totalEmojis++;
-              if (emoji.name || emoji.tags.length > 0) {
+              if (emoji.name || emoji.tags.length > 0 || (emoji.keywords && emoji.keywords.length > 0)) {
                 taggedEmojis++;
               }
             });
@@ -188,7 +187,11 @@
               // 统一使用name字段，移除description字段
               emojiData[platformIndex].emojis[emojiIndex].name = e.target.value;
               // 如果存在description字段，删除它
-              if (emojiData[platformIndex].emojis[emojiIndex].hasOwnProperty('description')) {
+              if (
+                emojiData[platformIndex].emojis[emojiIndex].hasOwnProperty(
+                  "description"
+                )
+              ) {
                 delete emojiData[platformIndex].emojis[emojiIndex].description;
               }
               updateJsonPreview();
@@ -199,6 +202,44 @@
 
             preview.appendChild(img);
             preview.appendChild(descContainer);
+
+            // Keywords编辑区域 (独立的card级别组件)
+            const keywordsContainer = document.createElement("div");
+            keywordsContainer.className = "keywords-container";
+            const keywordsLabel = document.createElement("label");
+            keywordsLabel.textContent = "关键词 (Keywords)";
+            keywordsLabel.className = "keywords-label";
+            keywordsContainer.appendChild(keywordsLabel);
+
+            const keywordsInput = document.createElement("input");
+            keywordsInput.type = "text";
+            keywordsInput.placeholder = "输入关键词，用英文逗号分隔";
+            keywordsInput.className = "keywords-input";
+
+            // 初始化keywords数组
+            if (!emoji.keywords) {
+              emojiData[platformIndex].emojis[emojiIndex].keywords = [];
+            }
+
+            // 显示现有keywords (数组转换为逗号分隔字符串)
+            const keywordsArray = emojiData[platformIndex].emojis[emojiIndex].keywords || [];
+            keywordsInput.value = keywordsArray.join(',');
+
+            // 输入变化时更新数据
+            keywordsInput.oninput = (e) => {
+              const keywordsText = e.target.value;
+              // 解析逗号分隔字符串为数组，去除空白和重复
+              const keywords = keywordsText
+                .split(',')
+                .map(k => k.trim())
+                .filter((k, index, arr) => k && arr.indexOf(k) === index);
+              
+              emojiData[platformIndex].emojis[emojiIndex].keywords = keywords;
+              updateJsonPreview();
+              saveToCache();
+            };
+
+            keywordsContainer.appendChild(keywordsInput);
 
             const tagsGroup = document.createElement("div");
             tagsGroup.className = "form-group";
@@ -260,6 +301,7 @@
             });
 
             card.appendChild(preview);
+            card.appendChild(keywordsContainer);
             card.appendChild(tagsGroup);
             grid.appendChild(card);
           });

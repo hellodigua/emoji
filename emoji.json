@@ -4,128 +4,153 @@
     "emojis": [
       {
         "url": "output/tieba/01_emoji.avif",
-        "tags": ["negative", "yygq", "neutral", "irony"],
-        "name": "呵呵"
+        "name": "呵呵",
+        "tags": ["negative", "sarcastic", "smiling"],
+        "keywords": ["呵呵", "冷笑", "无语", "看傻子", "不想理你"]
       },
       {
         "url": "output/tieba/02_emoji.avif",
-        "tags": ["positive", "funny", "neutral", "yygq"],
-        "name": "哈哈"
+        "name": "哈哈",
+        "tags": ["positive", "humorous", "laughing"],
+        "keywords": ["哈哈", "大笑", "笑了", "好好笑", "h hh"]
       },
       {
         "url": "output/tieba/03_emoji.avif",
-        "tags": ["positive", "cute", "yygq", "neutral", "irony", "funny"],
-        "name": "吐舌"
+        "name": "吐舌",
+        "tags": ["positive", "playful", "tongue-out"],
+        "keywords": ["吐舌", "卖萌", "可爱", "俏皮", "略略略"]
       },
       {
         "url": "output/tieba/04_emoji.avif",
-        "tags": ["neutral", "exaggerate", "yygq", "negative", "positive"],
-        "name": "啊"
+        "name": "啊",
+        "tags": ["neutral", "plain", "surprised", "open-mouth"],
+        "keywords": ["啊", "惊讶", "怎么了", "感叹"]
       },
       {
         "url": "output/tieba/05_emoji.avif",
-        "tags": ["positive"],
-        "name": "酷"
+        "name": "酷",
+        "tags": ["positive", "plain", "sunglasses"],
+        "keywords": ["酷", "墨镜", "大佬", "帅", "cool"]
       },
       {
         "url": "output/tieba/06_emoji.avif",
-        "tags": ["negative"],
-        "name": "怒"
+        "name": "怒",
+        "tags": ["negative", "plain", "angry"],
+        "keywords": ["怒", "生气", "愤怒", "怒火中烧", "气死了"]
       },
       {
         "url": "output/tieba/07_emoji.avif",
-        "tags": ["positive"],
-        "name": "开心"
+        "name": "开心",
+        "tags": ["positive", "plain", "smiling", "happy"],
+        "keywords": ["开心", "高兴", "快乐", "愉快", "笑"]
       },
       {
         "url": "output/tieba/08_emoji.avif",
-        "tags": ["neutral"],
-        "name": "汗"
+        "name": "汗",
+        "tags": ["neutral", "plain", "sweating"],
+        "keywords": ["汗", "流汗", "尴尬", "无语", "瀑布汗"]
       },
       {
         "url": "output/tieba/09_emoji.avif",
-        "tags": ["negative"],
-        "name": "大哭"
+        "name": "大哭",
+        "tags": ["negative", "plain", "crying"],
+        "keywords": ["大哭", "哭了", "伤心", "呜呜呜", "难过"]
       },
       {
         "url": "output/tieba/10_emoji.avif",
-        "tags": ["negative"],
-        "name": "黑线"
+        "name": "黑线",
+        "tags": ["negative", "plain", "annoyed", "face-lines"],
+        "keywords": ["黑线", "无语", "满头黑线", "服了"]
       },
       {
         "url": "output/tieba/11_emoji.avif",
-        "tags": ["negative"],
-        "name": "不高兴"
+        "name": "不高兴",
+        "tags": ["negative", "plain", "pouting", "unhappy"],
+        "keywords": ["不高兴", "不开心", "生气", "哼", "有小情绪了"]
       },
       {
         "url": "output/tieba/12_emoji.avif",
-        "tags": ["positive"],
-        "name": "真棒"
+        "name": "真棒",
+        "tags": ["positive", "supportive", "thumbs-up"],
+        "keywords": ["真棒", "厉害", "赞", "顶", "666"]
       },
       {
         "url": "output/tieba/13_emoji.avif",
-        "tags": ["neutral"],
-        "name": "疑问"
+        "name": "疑问",
+        "tags": ["neutral", "plain", "questioning", "confused"],
+        "keywords": ["疑问", "问号", "什么", "不懂", "黑人问号"]
       },
       {
         "url": "output/tieba/14_emoji.avif",
-        "tags": ["negative", "yygq"],
-        "name": "阴险"
+        "name": "阴险",
+        "tags": ["negative", "sarcastic", "smirking", "evil-grin"],
+        "keywords": ["阴险", "坏笑", "嘿嘿嘿", "计划通", "搞事情"]
       },
       {
         "url": "output/tieba/15_emoji.avif",
-        "tags": ["neutral"],
-        "name": "咦"
+        "name": "咦",
+        "tags": ["neutral", "plain", "peeking", "curious"],
+        "keywords": ["咦", "好奇", "看看", "什么情况", "让我看看"]
       },
       {
         "url": "output/tieba/16_emoji.avif",
-        "tags": ["negative"],
-        "name": "委屈"
+        "name": "委屈",
+        "tags": ["negative", "plain", "pouting", "sad-eyes"],
+        "keywords": ["委屈", "宝宝委屈", "难过", "想哭", "嘤嘤嘤"]
       },
       {
         "url": "output/tieba/17_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "笑眼"
+        "name": "笑眼",
+        "tags": ["positive", "playful", "smiling", "happy"],
+        "keywords": ["笑眼", "可爱", "开心", "眯眯眼", "笑眯眯"]
       },
       {
         "url": "output/tieba/18_emoji.avif",
-        "tags": ["positive"],
-        "name": "太开心"
+        "name": "太开心",
+        "tags": ["positive", "plain", "laughing", "ecstatic"],
+        "keywords": ["太开心", "高兴", "耶", "快乐", "开心到飞起"]
       },
       {
         "url": "output/tieba/19_emoji.avif",
-        "tags": ["neutral", "funny", "yygq"],
-        "name": "滑稽"
+        "name": "滑稽",
+        "tags": ["neutral", "humorous", "sarcastic", "smirking", "side-eye"],
+        "keywords": ["滑稽", "doge", "手动狗头", "斜眼笑", "你懂的", "保命"]
       },
       {
         "url": "output/tieba/20_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "乖"
+        "name": "乖",
+        "tags": ["positive", "playful", "blushing", "cute"],
+        "keywords": ["乖", "听话", "摸摸头", "可爱", "好孩子"]
       },
       {
         "url": "output/tieba/21_emoji.avif",
-        "tags": ["neutral", "exaggerate"],
-        "name": "狂汗"
+        "name": "狂汗",
+        "tags": ["neutral", "plain", "sweating"],
+        "keywords": ["狂汗", "瀑布汗", "巨尴尬", "大写的无语", "汗如雨下"]
       },
       {
         "url": "output/tieba/22_emoji.avif",
-        "tags": ["negative", "exaggerate"],
-        "name": "惊哭"
+        "name": "惊哭",
+        "tags": ["negative", "plain", "crying", "scared"],
+        "keywords": ["惊哭", "吓哭了", "震惊", "害怕", "什么鬼"]
       },
       {
         "url": "output/tieba/23_emoji.avif",
-        "tags": ["neutral", "exaggerate", "abstract"],
-        "name": "喷"
+        "name": "喷",
+        "tags": ["neutral", "surreal", "humorous", "spitting", "laughing"],
+        "keywords": ["喷", "喷了", "笑喷", "一口水喷出来", "蚌埠住了"]
       },
       {
         "url": "output/tieba/24_emoji.avif",
-        "tags": ["negative"],
-        "name": "生气"
+        "name": "生气",
+        "tags": ["negative", "plain", "angry", "pouting"],
+        "keywords": ["生气", "怒", "气鼓鼓", "不爽", "我生气了"]
       },
       {
         "url": "output/tieba/25_emoji.avif",
-        "tags": ["neutral", "exaggerate"],
-        "name": "惊讶"
+        "name": "惊讶",
+        "tags": ["neutral", "plain", "surprised", "shocked", "open-mouth"],
+        "keywords": ["惊讶", "震惊", "惊了", "目瞪口呆", "卧槽"]
       }
     ]
   },
@@ -135,137 +160,164 @@
       {
         "url": "output/zhihu/01_爱.avif",
         "name": "爱",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "supportive", "heart"],
+        "keywords": ["爱", "比心", "感谢", "喜欢", "爱心"]
       },
       {
         "url": "output/zhihu/02_害羞.avif",
         "name": "害羞",
-        "tags": ["positive", "shy", "cute"]
+        "tags": ["positive", "playful", "blushing"],
+        "keywords": ["害羞", "不好意思", "脸红", "嘿嘿", "过奖了"]
       },
       {
         "url": "output/zhihu/03_好奇.avif",
         "name": "好奇",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "curious", "looking"],
+        "keywords": ["好奇", "什么呀", "看看", "围观", "展开说说"]
       },
       {
         "url": "output/zhihu/04_思考.avif",
         "name": "思考",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "thinking"],
+        "keywords": ["思考", "让我想想", "嗯", "hmm", "沉思", "此问题存疑"]
       },
       {
         "url": "output/zhihu/05_酷.avif",
         "name": "酷",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "sunglasses"],
+        "keywords": ["酷", "墨镜", "帅", "cool", "大佬"]
       },
       {
         "url": "output/zhihu/06_大笑.avif",
         "name": "大笑",
-        "tags": ["positive", "funny"]
+        "tags": ["positive", "humorous", "laughing"],
+        "keywords": ["大笑", "哈哈", "笑了", "笑出声"]
       },
       {
         "url": "output/zhihu/07_捂脸.avif",
         "name": "捂脸",
-        "tags": ["negative", "shy"]
+        "tags": ["negative", "plain", "facepalm"],
+        "keywords": ["捂脸", "没眼看", "尴尬", "社死", "我错了"]
       },
       {
         "url": "output/zhihu/08_捂嘴.avif",
         "name": "捂嘴",
-        "tags": ["neutral", "shy"]
+        "tags": ["neutral", "plain", "mouth-covered"],
+        "keywords": ["捂嘴", "偷笑", "憋笑", "不敢说话", "吃惊"]
       },
       {
         "url": "output/zhihu/09_飙泪笑.avif",
         "name": "飙泪笑",
-        "tags": ["positive", "funny", "exaggerate"]
+        "tags": ["positive", "humorous", "laughing", "crying"],
+        "keywords": ["飙泪笑", "笑哭", "笑出眼泪", "太好笑了", "笑不活了"]
       },
       {
         "url": "output/zhihu/10_耶.avif",
         "name": "耶",
-        "tags": ["positive"]
+        "tags": ["positive", "supportive", "victory-hand"],
+        "keywords": ["耶", "胜利", "太棒了", "开心", "yeah"]
       },
       {
         "url": "output/zhihu/11_惊喜.avif",
         "name": "惊喜",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "surprised", "happy"],
+        "keywords": ["惊喜", "哇", "真的吗", "惊了", "还有这事"]
       },
       {
         "url": "output/zhihu/12_流泪.avif",
         "name": "流泪",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "crying"],
+        "keywords": ["流泪", "哭了", "伤心", "难过", "感动"]
       },
       {
         "url": "output/zhihu/13_大哭.avif",
         "name": "大哭",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "crying"],
+        "keywords": ["大哭", "呜呜呜", "太惨了", "悲伤", "我破防了"]
       },
       {
         "url": "output/zhihu/14_生气.avif",
         "name": "生气",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "angry"],
+        "keywords": ["生气", "怒", "气愤", "愤怒", "很气"]
       },
       {
         "url": "output/zhihu/15_惊讶.avif",
         "name": "惊讶",
-        "tags": ["neutral", "exaggerate"]
+        "tags": ["neutral", "plain", "surprised", "shocked"],
+        "keywords": ["惊讶", "震惊", "目瞪口呆", "啊？", "难以置信"]
       },
       {
         "url": "output/zhihu/16_调皮.avif",
         "name": "调皮",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "playful", "tongue-out"],
+        "keywords": ["调皮", "吐舌", "淘气", "开玩笑", "俏皮"]
       },
       {
         "url": "output/zhihu/17_衰.avif",
         "name": "衰",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "dizzy", "unwell"],
+        "keywords": ["衰", "倒霉", "不顺", "运气不好", "我太难了"]
       },
       {
         "url": "output/zhihu/18_发呆.avif",
         "name": "发呆",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "dazed"],
+        "keywords": ["发呆", "放空", "不知道说啥", "呆住", "愣神"]
       },
       {
         "url": "output/zhihu/19_机智.avif",
         "name": "机智",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "idea", "winking"],
+        "keywords": ["机智", "聪明", "灵光一闪", "我懂了", "get", "学到了"]
       },
       {
         "url": "output/zhihu/20_尴尬.avif",
         "name": "尴尬",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "sweating", "awkward"],
+        "keywords": ["尴尬", "汗", "不知道怎么回", "尬住", "脚趾抠地"]
       },
       {
         "url": "output/zhihu/21_吃瓜.avif",
         "name": "吃瓜",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "eating"],
+        "keywords": ["吃瓜", "围观", "看戏", "前排", "坐等后续", "利益相关"]
       },
       {
         "url": "output/zhihu/22_为难.avif",
         "name": "为难",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "troubled"],
+        "keywords": ["为难", "纠结", "难办", "头大", "这可怎么办"]
       },
       {
         "url": "output/zhihu/23_看看你.avif",
         "name": "看看你",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "peeking", "looking"],
+        "keywords": ["看看你", "观察", "盯", "让我看看", "审视"]
       },
       {
         "url": "output/zhihu/24_滑稽.avif",
         "name": "滑稽",
-        "tags": ["neutral", "funny", "yygq"]
+        "tags": ["neutral", "humorous", "sarcastic", "smirking", "side-eye"],
+        "keywords": ["滑稽", "doge", "手动狗头", "斜眼", "你懂的", "友善的提醒"]
       },
       {
         "url": "output/zhihu/25_开心.avif",
         "name": "开心",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "happy", "smiling"],
+        "keywords": ["开心", "高兴", "笑", "快乐"]
       },
       {
         "url": "output/zhihu/26_笑哭.avif",
         "name": "笑哭",
-        "tags": ["positive", "funny", "exaggerate"]
+        "tags": ["positive", "humorous", "laughing", "crying"],
+        "keywords": ["笑哭", "飙泪笑", "笑死", "哈哈哈哈"]
       },
       {
         "url": "output/zhihu/27_白眼.avif",
         "name": "白眼",
-        "tags": ["negative", "yygq"]
+        "tags": ["negative", "sarcastic", "eye-roll"],
+        "keywords": ["白眼", "无语", "呵呵", "懒得理你", "水平太低"]
       }
     ]
   },
@@ -274,153 +326,183 @@
     "emojis": [
       {
         "url": "output/xiaohongshu/01_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "微笑"
+        "name": "微笑",
+        "tags": ["positive", "plain", "smiling"],
+        "keywords": ["微笑", "笑脸", "你好", "开心", "姐妹好"]
       },
       {
         "url": "output/xiaohongshu/02_emoji.avif",
-        "tags": ["positive", "shy", "cute"],
-        "name": "害羞"
+        "name": "害羞",
+        "tags": ["positive", "playful", "blushing"],
+        "keywords": ["害羞", "脸红", "不好意思", "谢谢宝子夸奖"]
       },
       {
         "url": "output/xiaohongshu/03_emoji.avif",
-        "tags": ["negative", "cute"],
-        "name": "失望"
+        "name": "失望",
+        "tags": ["negative", "plain", "sad", "disappointed"],
+        "keywords": ["失望", "难过", "拔草了", "有点坑", "避雷"]
       },
       {
         "url": "output/xiaohongshu/04_emoji.avif",
-        "tags": ["neutral", "cute"],
-        "name": "汗颜"
+        "name": "汗颜",
+        "tags": ["neutral", "plain", "sweating"],
+        "keywords": ["汗颜", "尴尬", "汗", "无语了", "我不理解"]
       },
       {
         "url": "output/xiaohongshu/05_emoji.avif",
-        "tags": ["positive", "exaggerate", "cute"],
-        "name": "哇"
+        "name": "哇",
+        "tags": ["positive", "supportive", "surprised", "amazed"],
+        "keywords": ["哇", "哇塞", "太棒了", "好厉害", "绝了", "被种草了"]
       },
       {
         "url": "output/xiaohongshu/06_emoji.avif",
-        "tags": ["neutral", "cute"],
-        "name": "喝奶茶"
+        "name": "喝奶茶",
+        "tags": ["neutral", "plain", "drinking"],
+        "keywords": ["喝奶茶", "下午茶", "摸鱼", "快乐水", "cheers"]
       },
       {
         "url": "output/xiaohongshu/07_emoji.avif",
-        "tags": ["positive", "funny", "cute"],
-        "name": "偷笑"
+        "name": "偷笑",
+        "tags": ["positive", "playful", "laughing", "mouth-covered"],
+        "keywords": ["偷笑", "窃喜", "嘿嘿", "有点好笑", "你懂的"]
       },
       {
         "url": "output/xiaohongshu/08_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "飞吻"
+        "name": "飞吻",
+        "tags": ["positive", "playful", "blowing-kiss", "heart"],
+        "keywords": ["飞吻", "爱你", "么么哒", "mua", "谢谢姐妹"]
       },
       {
         "url": "output/xiaohongshu/09_emoji.avif",
-        "tags": ["neutral", "exaggerate", "cute"],
-        "name": "石化"
+        "name": "石化",
+        "tags": ["neutral", "surreal", "shocked", "petrified"],
+        "keywords": ["石化", "惊呆", "愣住", "无语了", "我直接呆住"]
       },
       {
         "url": "output/xiaohongshu/10_emoji.avif",
-        "tags": ["positive", "funny", "exaggerate", "cute"],
-        "name": "笑哭"
+        "name": "笑哭",
+        "tags": ["positive", "humorous", "laughing", "crying"],
+        "keywords": ["笑哭", "笑不活了", "太好笑了", "姐妹你真是我的互联网嘴替"]
       },
       {
         "url": "output/xiaohongshu/11_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "赞"
+        "name": "赞",
+        "tags": ["positive", "supportive", "thumbs-up"],
+        "keywords": ["赞", "点赞", "喜欢", "支持", "棒", "YYDS", "姐妹说的对"]
       },
       {
         "url": "output/xiaohongshu/12_emoji.avif",
-        "tags": ["neutral", "cute"],
-        "name": "暗中观察"
+        "name": "暗中观察",
+        "tags": ["neutral", "playful", "peeking", "looking"],
+        "keywords": ["暗中观察", "围观", "看看", "吃瓜", "让我看看"]
       },
       {
         "url": "output/xiaohongshu/13_emoji.avif",
-        "tags": ["positive", "funny", "cute"],
-        "name": "大笑"
+        "name": "大笑",
+        "tags": ["positive", "humorous", "laughing"],
+        "keywords": ["大笑", "哈哈哈哈", "笑死", "姐妹你太好笑了"]
       },
       {
         "url": "output/xiaohongshu/14_emoji.avif",
-        "tags": ["positive", "yygq", "cute"],
-        "name": "色色"
+        "name": "色色",
+        "tags": ["positive", "playful", "heart-eyes"],
+        "keywords": ["色色", "星星眼", "爱了爱了", "好喜欢", "这个颜值绝了"]
       },
       {
         "url": "output/xiaohongshu/15_emoji.avif",
-        "tags": ["negative", "cute"],
-        "name": "哭惹"
+        "name": "哭惹",
+        "tags": ["negative", "plain", "crying"],
+        "keywords": ["哭惹", "哭了", "感动", "破防了", "呜呜呜", "好心疼"]
       },
       {
         "url": "output/xiaohongshu/16_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "萌萌哒"
+        "name": "萌萌哒",
+        "tags": ["positive", "playful", "cute", "blushing"],
+        "keywords": ["萌萌哒", "可爱", "宝宝", "萌化了", "好Q"]
       },
       {
         "url": "output/xiaohongshu/17_emoji.avif",
-        "tags": ["neutral", "yygq", "cute"],
-        "name": "斜眼"
+        "name": "斜眼",
+        "tags": ["neutral", "sarcastic", "playful", "side-eye"],
+        "keywords": ["斜眼", "你懂的", "有点东西", "嫌弃", "这是可以说的吗"]
       },
       {
         "url": "output/xiaohongshu/18_emoji.avif",
-        "tags": ["negative", "cute"],
-        "name": "可怜"
+        "name": "可怜",
+        "tags": ["negative", "plain", "sad-eyes", "pouting"],
+        "keywords": ["可怜", "抱抱", "心疼", "宝宝心里苦", "摸摸头"]
       },
       {
         "url": "output/xiaohongshu/19_emoji.avif",
-        "tags": ["negative", "exaggerate", "cute"],
-        "name": "抓狂"
+        "name": "抓狂",
+        "tags": ["negative", "plain", "frustrated", "scared"],
+        "keywords": ["抓狂", "啊啊啊", "崩溃", "救命", "我真的会谢"]
       },
       {
         "url": "output/xiaohongshu/20_emoji.avif",
-        "tags": ["negative", "shy", "cute"],
-        "name": "捂脸"
+        "name": "捂脸",
+        "tags": ["negative", "plain", "facepalm"],
+        "keywords": ["捂脸", "尴尬", "社死", "没脸见人", "这也太..."]
       },
       {
         "url": "output/xiaohongshu/21_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "派对"
+        "name": "派对",
+        "tags": ["positive", "supportive", "celebrating"],
+        "keywords": ["派对", "庆祝", "恭喜", "一起嗨", "为姐妹开心"]
       },
       {
         "url": "output/xiaohongshu/22_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "吧唧"
+        "name": "吧唧",
+        "tags": ["positive", "playful", "kissing"],
+        "keywords": ["吧唧", "亲亲", "mua", "爱你", "给姐妹一个亲亲"]
       },
       {
         "url": "output/xiaohongshu/23_emoji.avif",
-        "tags": ["neutral", "funny", "cute"],
-        "name": "抠鼻"
+        "name": "抠鼻",
+        "tags": ["neutral", "playful", "nose-picking"],
+        "keywords": ["抠鼻", "无聊", "随便吧", "嗯嗯"]
       },
       {
         "url": "output/xiaohongshu/24_emoji.avif",
-        "tags": ["neutral", "cute"],
-        "name": "再见"
+        "name": "再见",
+        "tags": ["neutral", "plain", "waving"],
+        "keywords": ["再见", "拜拜", "溜了", "下次聊"]
       },
       {
         "url": "output/xiaohongshu/25_emoji.avif",
-        "tags": ["negative", "cute"],
-        "name": "叹气"
+        "name": "叹气",
+        "tags": ["negative", "plain", "sighing"],
+        "keywords": ["叹气", "唉", "心累", "好难"]
       },
       {
         "url": "output/xiaohongshu/26_emoji.avif",
-        "tags": ["neutral", "cute"],
-        "name": "吃瓜"
+        "name": "吃瓜",
+        "tags": ["neutral", "plain", "eating"],
+        "keywords": ["吃瓜", "围观", "看看", "发生什么了"]
       },
       {
         "url": "output/xiaohongshu/27_emoji.avif",
-        "tags": ["negative", "exaggerate", "cute"],
-        "name": "扶墙"
+        "name": "扶墙",
+        "tags": ["negative", "humorous", "weak"],
+        "keywords": ["扶墙", "我缓缓", "信息量太大", "太顶了", "有点晕"]
       },
       {
         "url": "output/xiaohongshu/28_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "黄金薯"
+        "name": "黄金薯",
+        "tags": ["positive", "plain", "mascot"],
+        "keywords": ["黄金薯", "小红书", "官方", "薯宝宝"]
       },
       {
         "url": "output/xiaohongshu/29_emoji.avif",
-        "tags": ["neutral", "funny", "yygq", "cute"],
-        "name": "doge"
+        "name": "doge",
+        "tags": ["neutral", "humorous", "sarcastic", "smirking"],
+        "keywords": ["doge", "滑稽", "你懂的", "手动狗头", "有点好笑"]
       },
       {
         "url": "output/xiaohongshu/30_emoji.avif",
-        "tags": ["neutral", "abstract", "cute"],
-        "name": "扯脸"
+        "name": "扯脸",
+        "tags": ["neutral", "surreal", "playful", "face-pull"],
+        "keywords": ["扯脸", "rua", "好软", "可爱", "捏捏"]
       }
     ]
   },
@@ -430,152 +512,182 @@
       {
         "url": "output/douyin/001_douyin_emoji.avif",
         "name": "微笑",
-        "tags": ["positive", "yygq"]
+        "tags": ["positive", "sarcastic", "smiling"],
+        "keywords": ["微笑", "呵呵", "笑而不语", "坐等后续", "不简单"]
       },
       {
         "url": "output/douyin/003_douyin_emoji.avif",
         "name": "发呆",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "dazed"],
+        "keywords": ["发呆", "放空", "愣住", "没听懂", "状况外"]
       },
       {
         "url": "output/douyin/006_douyin_emoji.avif",
-        "tags": ["negative"],
-        "name": "流泪"
+        "name": "流泪",
+        "tags": ["negative", "plain", "crying"],
+        "keywords": ["流泪", "哭了", "感动", "破防了", "心疼"]
       },
       {
         "url": "output/douyin/007_douyin_emoji.avif",
-        "tags": ["negative", "shy"],
-        "name": "捂脸"
+        "name": "捂脸",
+        "tags": ["negative", "plain", "facepalm"],
+        "keywords": ["捂脸", "没眼看", "尴尬", "我错了", "别秀了"]
       },
       {
         "url": "output/douyin/009_douyin_emoji.avif",
-        "tags": ["positive", "funny"],
-        "name": "龇牙"
+        "name": "龇牙",
+        "tags": ["positive", "playful", "grinning"],
+        "keywords": ["龇牙", "嘿嘿", "开心", "笑"]
       },
       {
         "url": "output/douyin/010_douyin_emoji.avif",
-        "tags": ["negative", "yygq"],
-        "name": "尬笑"
+        "name": "尬笑",
+        "tags": ["negative", "sarcastic", "humorous", "awkward-smile"],
+        "keywords": ["尬笑", "尴尬", "我真的会谢", "脚趾抠地", "笑不出来"]
       },
       {
         "url": "output/douyin/011_douyin_emoji.avif",
-        "tags": ["positive", "shy", "cute"],
-        "name": "害羞"
+        "name": "害羞",
+        "tags": ["positive", "playful", "blushing"],
+        "keywords": ["害羞", "脸红", "不好意思", "谢谢"]
       },
       {
         "url": "output/douyin/012_douyin_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "调皮"
+        "name": "调皮",
+        "tags": ["positive", "playful", "tongue-out"],
+        "keywords": ["调皮", "吐舌", "略略略", "开玩笑"]
       },
       {
         "url": "output/douyin/013_douyin_emoji.avif",
-        "tags": ["positive", "yygq"],
-        "name": "色"
+        "name": "色",
+        "tags": ["positive", "playful", "heart-eyes"],
+        "keywords": ["色", "爱了", "喜欢", "馋了", "姐姐（哥哥）我可以"]
       },
       {
         "url": "output/douyin/014_douyin_emoji.avif",
-        "tags": ["neutral"],
-        "name": "看"
+        "name": "看",
+        "tags": ["neutral", "plain", "looking"],
+        "keywords": ["看", "瞅瞅", "围观", "让我看看"]
       },
       {
         "url": "output/douyin/020_douyin_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "抱抱你"
+        "name": "抱抱你",
+        "tags": ["positive", "supportive", "hugging"],
+        "keywords": ["抱抱你", "抱抱", "安慰", "别难过", "摸摸"]
       },
       {
         "url": "output/douyin/025_douyin_emoji.avif",
-        "tags": ["positive", "funny"],
-        "name": "大笑"
+        "name": "大笑",
+        "tags": ["positive", "humorous", "laughing"],
+        "keywords": ["大笑", "哈哈哈哈", "笑不活了", "神评论"]
       },
       {
         "url": "output/douyin/027_douyin_emoji.avif",
         "name": "送心",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "supportive", "heart"],
+        "keywords": ["送心", "比心", "爱心", "喜欢你", "支持"]
       },
       {
         "url": "output/douyin/038_douyin_emoji.avif",
-        "tags": ["negative", "exaggerate"],
-        "name": "泣不成声"
+        "name": "泣不成声",
+        "tags": ["negative", "humorous", "crying-hard"],
+        "keywords": ["泣不成声", "爆哭", "破防了", "我太难了", "呜呜呜"]
       },
       {
         "url": "output/douyin/040_douyin_emoji.avif",
-        "tags": ["positive", "funny", "abstract"],
-        "name": "大金牙"
+        "name": "大金牙",
+        "tags": ["positive", "humorous", "surreal", "grinning"],
+        "keywords": ["大金牙", "嘿嘿", "土豪", "bling bling", "亮了"]
       },
       {
         "url": "output/douyin/041_douyin_emoji.avif",
-        "tags": ["positive", "funny"],
-        "name": "偷笑"
+        "name": "偷笑",
+        "tags": ["positive", "playful", "laughing", "mouth-covered"],
+        "keywords": ["偷笑", "憋笑", "嘿嘿", "有点东西"]
       },
       {
         "url": "output/douyin/045_douyin_emoji.avif",
-        "tags": ["negative", "cute"],
-        "name": "可怜"
+        "name": "可怜",
+        "tags": ["negative", "plain", "sad-eyes"],
+        "keywords": ["可怜", "心疼", "抱抱", "太惨了"]
       },
       {
         "url": "output/douyin/048_douyin_emoji.avif",
-        "tags": ["positive", "funny", "exaggerate"],
-        "name": "笑哭"
+        "name": "笑哭",
+        "tags": ["positive", "humorous", "laughing", "crying"],
+        "keywords": ["笑哭", "笑死", "哈哈哈哈", "这是什么神操作"]
       },
       {
         "url": "output/douyin/049_douyin_emoji.avif",
-        "tags": ["negative", "yygq"],
-        "name": "奸笑"
+        "name": "奸笑",
+        "tags": ["negative", "sarcastic", "smirking", "evil-grin"],
+        "keywords": ["奸笑", "坏笑", "搞事情", "不怀好意"]
       },
       {
         "url": "output/douyin/050_douyin_emoji.avif",
-        "tags": ["positive"],
-        "name": "得意"
+        "name": "得意",
+        "tags": ["positive", "playful", "smug"],
+        "keywords": ["得意", "骄傲", "你看我怎么样", "厉害吧"]
       },
       {
         "url": "output/douyin/052_douyin_emoji.avif",
-        "tags": ["positive", "yygq"],
-        "name": "坏笑"
+        "name": "坏笑",
+        "tags": ["positive", "sarcastic", "playful", "smirking"],
+        "keywords": ["坏笑", "嘿嘿", "你懂的", "有点意思"]
       },
       {
         "url": "output/douyin/054_douyin_emoji.avif",
-        "tags": ["negative", "exaggerate"],
-        "name": "泪奔"
+        "name": "泪奔",
+        "tags": ["negative", "humorous", "crying-hard"],
+        "keywords": ["泪奔", "感动哭了", "破防了家人们", "绷不住了"]
       },
       {
         "url": "output/douyin/056_douyin_emoji.avif",
-        "tags": ["negative", "exaggerate"],
-        "name": "恐惧"
+        "name": "恐惧",
+        "tags": ["negative", "plain", "scared"],
+        "keywords": ["恐惧", "害怕", "吓人", "我不敢看"]
       },
       {
         "url": "output/douyin/058_douyin_emoji.avif",
         "name": "快哭了",
-        "tags": ["negative", "cute"]
+        "tags": ["negative", "plain", "crying"],
+        "keywords": ["快哭了", "委屈", "要哭了", "别骂了"]
       },
       {
         "url": "output/douyin/064_douyin_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "飞吻"
+        "name": "飞吻",
+        "tags": ["positive", "playful", "blowing-kiss"],
+        "keywords": ["飞吻", "mua", "爱你", "亲一个"]
       },
       {
         "url": "output/douyin/088_douyin_emoji.avif",
-        "tags": ["positive", "cute"],
-        "name": "摸头"
+        "name": "摸头",
+        "tags": ["positive", "supportive", "pat-head"],
+        "keywords": ["摸头", "乖", "安慰", "抱抱", "心疼你"]
       },
       {
         "url": "output/douyin/096_douyin_emoji.avif",
-        "tags": ["positive", "exaggerate"],
-        "name": "惊喜"
+        "name": "惊喜",
+        "tags": ["positive", "plain", "surprised"],
+        "keywords": ["惊喜", "哇", "真的吗", "爱了爱了"]
       },
       {
         "url": "output/douyin/098_douyin_emoji.avif",
-        "tags": ["positive"],
-        "name": "奋斗"
+        "name": "奋斗",
+        "tags": ["positive", "supportive", "flexing"],
+        "keywords": ["奋斗", "加油", "努力", "打工人", "奥利给"]
       },
       {
         "url": "output/douyin/100_douyin_emoji.avif",
-        "tags": ["negative"],
-        "name": "大哭"
+        "name": "大哭",
+        "tags": ["negative", "plain", "crying-hard"],
+        "keywords": ["大哭", "爆哭", "呜呜呜", "伤心"]
       },
       {
         "url": "output/douyin/101_douyin_emoji.avif",
-        "tags": ["positive", "funny"],
-        "name": "嘿哈"
+        "name": "嘿哈",
+        "tags": ["positive", "humorous", "fighting"],
+        "keywords": ["嘿哈", "加油", "必胜", "干活了", "挑战"]
       }
     ]
   },
@@ -585,177 +697,212 @@
       {
         "url": "output/bilibili/01_笑哭.avif",
         "name": "笑哭",
-        "tags": ["positive", "funny", "exaggerate"]
+        "tags": ["positive", "humorous", "laughing", "crying"],
+        "keywords": ["笑哭", "2333", "笑死", "草", "哈哈哈哈"]
       },
       {
         "url": "output/bilibili/02_星星眼.avif",
         "name": "星星眼",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "supportive", "star-eyes"],
+        "keywords": ["星星眼", "崇拜", "大佬", "AWSL", "kksk", "太强了"]
       },
       {
         "url": "output/bilibili/03_微笑.avif",
         "name": "微笑",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "smiling"],
+        "keywords": ["微笑", "友好", "你好", "善意"]
       },
       {
         "url": "output/bilibili/04_吃瓜.avif",
         "name": "吃瓜",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "eating"],
+        "keywords": ["吃瓜", "围观", "前排", "发生什么了", "看戏"]
       },
       {
         "url": "output/bilibili/05_OK.avif",
         "name": "OK",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "ok-hand"],
+        "keywords": ["OK", "好的", "收到", "没问题"]
       },
       {
         "url": "output/bilibili/06_doge.avif",
         "name": "doge",
-        "tags": ["neutral", "funny", "yygq"]
+        "tags": ["neutral", "humorous", "sarcastic", "smirking"],
+        "keywords": ["doge", "滑稽", "二哈", "你懂的", "奇怪的知识增加了"]
       },
       {
         "url": "output/bilibili/07_大哭.avif",
         "name": "大哭",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "crying-hard"],
+        "keywords": ["大哭", "呜呜呜", "破防了", "刀子", "泪目"]
       },
       {
         "url": "output/bilibili/08_辣眼睛.avif",
         "name": "辣眼睛",
-        "tags": ["negative", "exaggerate"]
+        "tags": ["negative", "humorous", "eye-covering", "cringing"],
+        "keywords": ["辣眼睛", "瞎了", "丑", "cringe", "看不下去了", "净化眼球"]
       },
       {
         "url": "output/bilibili/09_滑稽.avif",
         "name": "滑稽",
-        "tags": ["neutral", "funny", "yygq"]
+        "tags": ["neutral", "humorous", "sarcastic", "smirking", "side-eye"],
+        "keywords": ["滑稽", "doge", "斜眼", "你懂的", "有点东西"]
       },
       {
         "url": "output/bilibili/10_喜极而泣.avif",
         "name": "喜极而泣",
-        "tags": ["positive", "exaggerate"]
+        "tags": ["positive", "humorous", "crying", "happy"],
+        "keywords": ["喜极而泣", "感动", "太好了", "终于", "圆满了"]
       },
       {
         "url": "output/bilibili/11_呲牙.avif",
         "name": "呲牙",
-        "tags": ["positive", "funny"]
+        "tags": ["positive", "playful", "grinning"],
+        "keywords": ["呲牙", "嘿嘿", "开心", "憨笑"]
       },
       {
         "url": "output/bilibili/12_歪嘴.avif",
         "name": "歪嘴",
-        "tags": ["positive", "funny", "yygq"]
+        "tags": ["positive", "humorous", "sarcastic", "smirking"],
+        "keywords": ["歪嘴", "龙王", "不屑", "就这", "有点意思"]
       },
       {
         "url": "output/bilibili/13_调皮.avif",
         "name": "调皮",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "playful", "tongue-out"],
+        "keywords": ["调皮", "吐舌", "卖萌", "开玩笑", "略略略"]
       },
       {
         "url": "output/bilibili/14_妙啊.avif",
         "name": "妙啊",
-        "tags": ["positive"]
+        "tags": ["positive", "supportive", "smug", "impressed"],
+        "keywords": ["妙啊", "厉害", "神操作", "绝了", "高", "学到了"]
       },
       {
         "url": "output/bilibili/15_嗑瓜子.avif",
         "name": "嗑瓜子",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "eating"],
+        "keywords": ["嗑瓜子", "吃瓜", "围观", "看戏", "无聊"]
       },
       {
         "url": "output/bilibili/16_脱单doge.avif",
         "name": "脱单doge",
-        "tags": ["positive", "cute", "funny"]
+        "tags": ["positive", "humorous", "playful", "heart-eyes"],
+        "keywords": ["脱单doge", "doge", "爱心", "kdl", "在一起"]
       },
       {
         "url": "output/bilibili/17_笑.avif",
         "name": "笑",
-        "tags": ["positive", "funny"]
+        "tags": ["positive", "humorous", "laughing"],
+        "keywords": ["笑", "哈哈", "笑了", "XD"]
       },
       {
         "url": "output/bilibili/18_给心心.avif",
         "name": "给心心",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "supportive", "heart"],
+        "keywords": ["给心心", "比心", "爱心", "喜欢", "给你"]
       },
       {
         "url": "output/bilibili/19_脸红.avif",
         "name": "脸红",
-        "tags": ["positive", "shy", "cute"]
+        "tags": ["positive", "playful", "blushing"],
+        "keywords": ["脸红", "害羞", "不好意思", "可爱"]
       },
       {
         "url": "output/bilibili/20_哦呼.avif",
         "name": "哦呼",
-        "tags": ["neutral", "exaggerate"]
+        "tags": ["neutral", "plain", "surprised"],
+        "keywords": ["哦呼", "惊讶", "哇", "齐木楠雄"]
       },
       {
         "url": "output/bilibili/21_喜欢.avif",
         "name": "喜欢",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "supportive", "loving"],
+        "keywords": ["喜欢", "爱了", "收藏了", "gkd", "多来点"]
       },
       {
         "url": "output/bilibili/22_酸了.avif",
         "name": "酸了",
-        "tags": ["negative", "yygq"]
+        "tags": ["negative", "sarcastic", "crying", "jealous"],
+        "keywords": ["酸了", "羡慕", "嫉妒", "柠檬", "我怎么没有"]
       },
       {
         "url": "output/bilibili/23_害羞.avif",
         "name": "害羞",
-        "tags": ["positive", "shy", "cute"]
+        "tags": ["positive", "playful", "blushing"],
+        "keywords": ["害羞", "脸红", "萌", "不好意思"]
       },
       {
         "url": "output/bilibili/24_嫌弃.avif",
         "name": "嫌弃",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "disgusted"],
+        "keywords": ["嫌弃", "鄙视", "什么玩意", "yue"]
       },
       {
         "url": "output/bilibili/25_惊讶.avif",
         "name": "惊讶",
-        "tags": ["neutral", "exaggerate"]
+        "tags": ["neutral", "plain", "shocked"],
+        "keywords": ["惊讶", "震惊", "高能", "惊了", "卧槽"]
       },
       {
         "url": "output/bilibili/26_捂脸.avif",
         "name": "捂脸",
-        "tags": ["negative", "shy"]
+        "tags": ["negative", "plain", "facepalm"],
+        "keywords": ["捂脸", "尴尬", "没眼看", "社死", "公开处刑"]
       },
       {
         "url": "output/bilibili/27_大笑.avif",
         "name": "大笑",
-        "tags": ["positive", "funny"]
+        "tags": ["positive", "humorous", "laughing"],
+        "keywords": ["大笑", "23333", "哈哈哈哈", "笑疯了"]
       },
       {
         "url": "output/bilibili/28_抠鼻.avif",
         "name": "抠鼻",
-        "tags": ["neutral", "funny"]
+        "tags": ["neutral", "playful", "nose-picking"],
+        "keywords": ["抠鼻", "无聊", "不屑", "随便"]
       },
       {
         "url": "output/bilibili/29_惊喜.avif",
         "name": "惊喜",
-        "tags": ["positive", "exaggerate"]
+        "tags": ["positive", "plain", "surprised", "happy"],
+        "keywords": ["惊喜", "哇", "彩蛋", "竟然", "爱了"]
       },
       {
         "url": "output/bilibili/30_点赞.avif",
         "name": "点赞",
-        "tags": ["positive"]
+        "tags": ["positive", "supportive", "thumbs-up"],
+        "keywords": ["点赞", "赞", "支持", "三连", "下次一定", "UP主辛苦了"]
       },
       {
         "url": "output/bilibili/31_无语.avif",
         "name": "无语",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "speechless"],
+        "keywords": ["无语", "汗", "不知道说啥", "地铁老人手机"]
       },
       {
-        "url": "output/bili bili/32_委屈.avif",
+        "url": "output/bilibili/32_委屈.avif",
         "name": "委屈",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "pouting", "sad-eyes"],
+        "keywords": ["委屈", "难过", "想哭", "心疼", "抱抱"]
       },
       {
         "url": "output/bilibili/33_傲娇.avif",
         "name": "傲娇",
-        "tags": ["neutral", "cute"]
+        "tags": ["neutral", "playful", "tsundere"],
+        "keywords": ["傲娇", "才不是呢", "哼", "别误会了"]
       },
       {
         "url": "output/bilibili/34_疼.avif",
         "name": "疼",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "hurting"],
+        "keywords": ["疼", "痛", "心疼", "看着都疼"]
       },
       {
         "url": "output/bilibili/35_思考.avif",
         "name": "思考",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "thinking"],
+        "keywords": ["思考", "嗯", "让我想想", "原来如此", "细节"]
       }
     ]
   },
@@ -765,152 +912,182 @@
       {
         "url": "output/weibo/2018new_weixioa02_org.avif",
         "name": "微笑",
-        "tags": ["positive", "yygq"]
+        "tags": ["positive", "sarcastic", "smiling"],
+        "keywords": ["微笑", "呵呵", "懂了", "不予置评", "坐等反转"]
       },
       {
         "url": "output/weibo/2018new_keai_org.avif",
         "name": "可爱",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "playful", "sarcastic", "cute"],
+        "keywords": ["可爱", "就这？", "无语", "天真", "哦"]
       },
       {
         "url": "output/weibo/2018new_taikaixin_org.avif",
         "name": "太开心",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "happy", "laughing"],
+        "keywords": ["太开心", "高兴", "快乐", "耶"]
       },
       {
         "url": "output/weibo/2018new_xixi_org.avif",
         "name": "嘻嘻",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "playful", "sarcastic", "smiling"],
+        "keywords": ["嘻嘻", "嘿嘿", "不好意思", "装傻"]
       },
       {
         "url": "output/weibo/2018new_haha_org.avif",
         "name": "哈哈",
-        "tags": ["positive", "funny"]
+        "tags": ["positive", "humorous", "laughing"],
+        "keywords": ["哈哈", "大笑", "笑了", "搞笑"]
       },
       {
         "url": "output/weibo/2018new_xiaoku_thumb.avif",
         "name": "笑cry",
-        "tags": ["positive", "funny", "exaggerate"]
+        "tags": ["positive", "humorous", "sarcastic", "laughing", "crying"],
+        "keywords": ["笑cry", "笑哭", "笑死", "太好笑了", "哈哈哈哈"]
       },
       {
         "url": "output/weibo/2018new_chanzui_org.avif",
         "name": "馋嘴",
-        "tags": ["neutral", "cute"]
+        "tags": ["neutral", "playful", "sarcastic", "drooling"],
+        "keywords": ["馋嘴", "想吃", "饿了", "羡慕", "流口水"]
       },
       {
         "url": "output/weibo/2018new_kelian_org.avif",
         "name": "可怜",
-        "tags": ["negative", "cute"]
+        "tags": ["negative", "plain", "sarcastic", "sad-eyes"],
+        "keywords": ["可怜", "抱抱", "心疼", "卖惨", "求求了"]
       },
       {
         "url": "output/weibo/2018new_shiwang_org.avif",
         "name": "失望",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "disappointed"],
+        "keywords": ["失望", "难过", "伤心", "塌房了"]
       },
       {
         "url": "output/weibo/2018new_beishang_org.avif",
         "name": "悲伤",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "sad"],
+        "keywords": ["悲伤", "难过", "郁闷", "心碎"]
       },
       {
         "url": "output/weibo/2018new_leimu_org.avif",
         "name": "泪",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "crying"],
+        "keywords": ["泪", "哭了", "感动", "破防", "呜呜呜"]
       },
       {
         "url": "output/weibo/2018new_kuxiao_org.avif",
         "name": "允悲",
-        "tags": ["negative", "funny"]
+        "tags": ["negative", "humorous", "crying", "laughing"],
+        "keywords": ["允悲", "哭笑不得", "又好笑又心疼", "蚌埠住了", "绷不住了"]
       },
       {
         "url": "output/weibo/2021_bitter_org.avif",
         "name": "苦涩",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "sad", "crying"],
+        "keywords": ["苦涩", "委屈", "宝宝心里苦", "难受"]
       },
       {
         "url": "output/weibo/2018new_aini_org.avif",
         "name": "爱你",
-        "tags": ["positive", "cute"]
+        "tags": ["positive", "supportive", "heart", "blowing-kiss"],
+        "keywords": ["爱你", "比心", "喜欢", "感谢", "么么哒"]
       },
       {
         "url": "output/weibo/2018new_chongjing_org.avif",
         "name": "憧憬",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "star-eyes"],
+        "keywords": ["憧憬", "崇拜", "星星眼", "大佬", "好棒"]
       },
       {
         "url": "output/weibo/2022_wow_org.avif",
         "name": "哇",
-        "tags": ["positive", "exaggerate"]
+        "tags": ["positive", "supportive", "surprised", "amazed"],
+        "keywords": ["哇", "哇塞", "厉害了", "牛"]
       },
       {
         "url": "output/weibo/2018new_xiaoerbuyu_org.avif",
         "name": "笑而不语",
-        "tags": ["neutral", "yygq"]
+        "tags": ["neutral", "sarcastic", "smirking"],
+        "keywords": ["笑而不语", "看穿一切", "你懂的", "吃瓜", "坐等"]
       },
       {
         "url": "output/weibo/2018new_ku_org.avif",
         "name": "酷",
-        "tags": ["positive"]
+        "tags": ["positive", "plain", "sunglasses"],
+        "keywords": ["酷", "帅", "cool", "大佬出街"]
       },
       {
         "url": "output/weibo/2018new_landelini_org.avif",
         "name": "白眼",
-        "tags": ["negative", "yygq"]
+        "tags": ["negative", "sarcastic", "eye-roll"],
+        "keywords": ["白眼", "懒得理你", "无语", "yue", "翻白眼"]
       },
       {
         "url": "output/weibo/202011_liekai_org.avif",
         "name": "裂开",
-        "tags": ["negative", "exaggerate", "abstract"]
+        "tags": ["negative", "surreal", "cracking", "shocked"],
+        "keywords": ["裂开", "我裂开了", "心态崩了", "傻了", "麻了"]
       },
       {
         "url": "output/weibo/2021_kaixueji_org.avif",
         "name": "开学季",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "reading"],
+        "keywords": ["开学季", "开学", "学习", "学生党"]
       },
       {
         "url": "output/weibo/2018new_chigua_org.avif",
         "name": "吃瓜",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "eating"],
+        "keywords": ["吃瓜", "前排", "蹲后续", "让瓜飞一会儿", "有瓜"]
       },
       {
         "url": "output/weibo/2025_ShedTears_org.avif",
         "name": "泪奔",
-        "tags": ["negative", "exaggerate"]
+        "tags": ["negative", "humorous", "crying-hard"],
+        "keywords": ["泪奔", "感动", "破防了", "绷不住了", "跑着哭"]
       },
       {
         "url": "output/weibo/2025_liuhan_org.avif",
         "name": "流汗",
-        "tags": ["neutral"]
+        "tags": ["neutral", "plain", "sweating"],
+        "keywords": ["流汗", "汗", "尴尬", "无语"]
       },
       {
         "url": "output/weibo/2025_wuzuiku_org.avif",
         "name": "捂嘴哭",
-        "tags": ["negative", "shy"]
+        "tags": ["negative", "plain", "crying", "mouth-covered"],
+        "keywords": ["捂嘴哭", "委屈", "偷偷哭", "心疼"]
       },
       {
         "url": "output/weibo/2025_jingkong_org.avif",
         "name": "惊恐",
-        "tags": ["negative", "exaggerate"]
+        "tags": ["negative", "plain", "scared"],
+        "keywords": ["惊恐", "害怕", "吓死", "什么鬼"]
       },
       {
         "url": "output/weibo/2025_yeah_org.avif",
         "name": "yeah",
-        "tags": ["positive"]
+        "tags": ["positive", "supportive", "victory-hand"],
+        "keywords": ["yeah", "耶", "胜利", "好耶"]
       },
       {
         "url": "output/weibo/2025_like_org.avif",
         "name": "点赞",
-        "tags": ["positive"]
+        "tags": ["positive", "supportive", "thumbs-up"],
+        "keywords": ["点赞", "赞", "支持", "顶", "说得好"]
       },
       {
         "url": "output/weibo/2025_shock_org.avif",
         "name": "震惊",
-        "tags": ["neutral", "exaggerate"]
+        "tags": ["neutral", "plain", "shocked"],
+        "keywords": ["震惊", "惊了", "难以置信", "我惊了"]
       },
       {
         "url": "output/weibo/2025_frown_org.avif",
         "name": "皱眉",
-        "tags": ["negative"]
+        "tags": ["negative", "plain", "frowning"],
+        "keywords": ["皱眉", "不悦", "感觉不对", "疑惑"]
       }
     ]
   }
